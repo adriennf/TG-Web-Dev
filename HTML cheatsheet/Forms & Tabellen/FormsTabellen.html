@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Tabellen</title>
+</head>
+<body>
+  <ul>
+    <li><a href="http://127.0.0.1:5500/index.html#home" class="active">Home</a></li>
+  </ul>
+   <h2>Forms & Tabellen</h2> 
+  
+    
+     
+      <form action="" method="post">
+        <fieldset>
+          <legend>Persoonsgegevens</legend>
+      
+   
+              <label for="name">Achternaam:</label>
+              <input type="text" id="achternaam" name="user_name"  placeholder="achternaam" maxlength="30" size="15"/>
+          
+              <label for="name">Voornaam:</label>
+              <input type="text" id="voornaam" name="user_name"  placeholder="voornaam" maxlength="30" size="15"/>
+        
+          
+                    <label for="birthday">Geboortedatum:</label>
+                    <input type="date"  placeholder="mm/dd/yyyy" size="15"/><br>
+           
+           
+              <input type="radio" id="male" name="gender" value="male">
+              <label for="male">M</label>
+              <br><input type="radio" id="female" name="gender" value="female">
+              <label for="female">V</label>
+               <br><input type="radio" id="other" name="gender" value="other">
+               <label for="other">M/V</label><br>
+             </form>
+      <label for="Postcode">Postcode:</label>
+      <input type="text"  placeholder="postcode" maxlength="6" size="15"/>
+      </div>
+      <div>
+    
+      <label for="name">Adres:</label>
+      <input type="text"  placeholder="adres" maxlength="40" size="15"/>
+  </div>
+</fieldset>
+  
+      
+      
+          <div class="button">
+              <button style="background-color:#DCDCDC" type="submit">Verzenden</button>       
+            <button style="background-color:#DCDCDC" type="reset">Resetten</button>
+        </div>
+      </form><br>
+
+      <form>
+        <fieldset>
+        <legend>Reserveringsformulier</legend>
+        <form action="/my-handling-form-page" method="post">
+        <div>
+       
+                <label for="name">Naam:</label>
+                <input type="text" id="name" name="user_name"  placeholder="user name" maxlength="30" size="15"/>
+        </div>
+        <div>
+          
+          <label for="e-mail">E-mail:</label>
+          <input type="text"  placeholder="e-mail adres" maxlength="25" size="15"/>
+          </div>
+       <p>Ik ben lid</p>
+          
+              <form action="/contact" method="POST">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Ja</label>
+               <br>
+               
+                 <input type="radio" id="female" name="gender" value="female">
+                 <label for="female">Nee</label>
+                 
+              
+               </form>
+           
+     <p>Vul het formulier hieronder in om een reservering voor een les en tijdvak te maken</p>
+          
+          <form action="/contact" method="POST">
+            <div class="custom-select" style="width: 500px;">
+              <select>
+                <option value="0">Activiteit:</option>
+                <option value="1">Squash</option>
+                <option value="2">Badminton</option>
+                <option value="3">Tafeltennis</option>
+              </select>
+                 <!-- Datum en tijdstip om te reserveren
+                  Een checkbox waarbij de gebruiker akkoord gaat over de reserverings voorwaardes
+                  -->
+                  <form action="/contact" method="POST">
+                    <div class="custom-select" style="width: 500px;">
+                      <select>
+                        <option value="0">Tijd</option>
+                        <option value="1">Maandag ochtend</option>
+                        <option value="2">Maandag avond</option>
+                        <option value="3">Woensdag middag</option>
+                        <option value="4">Woensdag avond</option>
+                        <option value="5">Donderdag ochtend</option>
+                        <option value="6">Donderdag avond</option>
+                        <option value="7">Zondag ochtend</option>
+                        
+                      </select><br>
+
+                 
+                      <form>
+                        <input type="checkbox">
+                        <label for="trems&pr">Ik ga akkoord met de <a href="#" style="color:dodgerblue">reserveringsvoorwaarden</a>.</p>   </label>
+                 
+               <div class="button">
+                <button style="background-color:#DCDCDC" type="submit">Verzenden</button>     
+  </div>
+        </form>
+        </div>
+      </fieldset><br>
+        <form>
+          <fieldset>
+          <legend>Reserveringsformulier</legend>
+          <form action="/my-handling-form-page" method="post">
+            <div>
+            
+                    <label for="name">Achternaam:</label>
+                    <input type="text" id="name" name="user_name"  placeholder="achternaam" maxlength="30" size="15"/>
+            </div>
+            <div>
+            
+                  <label for="name">Voornaam:</label>
+                  <input type="text" id="name" name="user_name"  placeholder="voornaam" maxlength="30" size="15"/>
+              </div>
+              <div>
+               
+                    <label for="telNumber">Telefoonnummer:</label>
+                    <input type="number" id="Telefoonnummer" name="telNumber"  placeholder="06-12345678" maxlength="13" size="15"/>
+                </div>
+                <div>
+                 
+                  <label for="e-mail">E-mail:</label>
+                  <input type="text"  placeholder="e-mail adres" maxlength="25" size="15"/>
+                  </div>
+                  <p>Vul de titels in:</p>
+
+<form action="/action_page.php">
+  <textarea name="message" rows="5" cols="30">Je boek titels</textarea>
+  <br><br>
+  <input type="submit">
+</form>
+        </fieldset>
+        <div id="myDIV" class="header">
+          <h2>Reflectie van de week</h2>
+          <input type="text" id="myInput" placeholder="Title...">
+          <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+        
+        <ul id="myUL">
+          <li>Focus</li>
+          <li class="checked">Netwerken</li>
+          <li>One step at a time</li>
+          <li>Put it in your code</li>
+          <li>Exercise</li>
+          <li>Breath</li>
+        </ul>
+
+      <h3>HTML tables</h3>
+
+
+
+<p>The HTML table element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.</p>
+<p>The head tag is used to group header content in an HTML table. Browsers can use these elements to enable scrolling of the table body independently of the header and footer. Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page. The <thead> element must have one or more <tr> tags inside.
+The thead tag must be used in the following context: As a child of a table element, after any caption and colgroup elements, and before any tbody, tfoot, and tr elements.</p>
+<p>The tbody tag is used to group the body content in an HTML table.
+The tbody element must have one or more tr tags inside.
+The body tag must be used in the following context: As a child of a table element, after any caption, colgroup, and thead elements.
+</p>
+<p>The tfoot tag is used to group footer content in an HTML table.
+The tfoot element must have one or more tr tags inside.
+The tfoot tag must be used in the following context: As a child of a table element, after any caption, colgroup,  thead, and tbody elements.
+</p>
+<p>The tr tag defines a row in an HTML table.
+A tr element contains one or more th or td elements.</p>
+<p>The th tag defines a header cell in an HTML table.
+Header cells - contains header information (created with the th element
+The text in th elements are bold and centered by default.</p>
+<h3>Colspan en rowspan attribuut </h3>
+<p>Attribute:colspan	Value:number	Specifies the number of columns a header cell should span</p>
+<p>Attribute:rowspan	Value:number	Specifies the number of rows a header cell should span</p>
+
+
+
+
+
+
+  
+  <br>
+
+  <table>
+    <tr>
+      <td>&nbsp;</td>
+      <th>Maandag</th>
+      <th>Dinsdag</th>
+      <th>Woensdag</th>
+      <th>Donderdag</th>
+      <th>Vrijdag</th>
+      <th>Weekend</th>
+    </tr>
+    <tr>
+      <td>Week 1</td>
+      <td>Kick off day</td>
+      <td >HTML intro</td>
+      <td>HTML Elements</td>
+      <td >HTML Forms</td>
+      <td>Eindopdracht</td>
+      <td>Eindopdracht</td>
+    </tr>
+    <tr>
+      <td>Week 2</td>
+      <td>CSS</td>
+      <td>CSS</td>
+      <td>CSS</td>
+      <td>CSS</td>
+      <td>CSS</td>
+      <td>CSS</td>
+    </tr>
+    
+  </table>
+  <br>
+  <!--  Zoek uit wat colspan en rowspan attribuut doet  -->
+
+
+<table>
+<thead>
+   <caption>THE GROWTH MINDSET</caption> 
+<tr>
+  <th  colspan="2">Fixed vs Growth Mind-set</th> 
+  </tr>
+</thead>
+  <tbody>
+    <tr>
+      <th>Leads to a desire to look smart and therefore a tendency to...</th>
+      <th>Leads to a desire to learn and therefore a tendency to...</th>
+    </tr>
+    <tr>
+      <td>...avoid challenges</td>
+      <td>...embrace challenges</td>
+    </tr>
+    <tr>
+      <td>...give up easily</td>
+      <td>...persisit in de face of setbacks</td>
+    </tr>
+    <tr>
+      <td>...see effort as fruitless or worse</td>
+      <td>...see effort as the path to mastery</td>
+    </tr>
+<tr>
+     <td>...ignore useful negative feedback</td>
+      <td>...learn from criticism</td>
+    </tr>
+    <tr>
+      <td>...feel tjreatened by the success of others</td>
+      <td>...find lessons and inspiration in the succes of others</td>
+    </tr>
+   
+<!--<tr>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>-->
+    
+</tbody>
+  <tfoot>
+   <tr>
+<td colspan="2">Being a developer is to be a life long learner.</td> 
+</tr>
+</tfoot>
+</table>
+
+
+          
+
+    
+
+</body>
+</html>

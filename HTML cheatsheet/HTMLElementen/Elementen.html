@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Elementen</title>
+  </head>
+  <body>
+    <!--4.Using a relative File Path.A relative file path points to a file relative to the current page. Onderzoek hoe het plaatsen van een foto gedaan wordt en plaats deze boven en onderaan je website door zowel gebruik te maken van de absolute path en relative path.. -->
+    <img
+      src="img/FDCA4603-4066-432F-B3C6-9FEBF5FCCABA_4_5005_c.jpeg"
+      alt="TechGrounds logo"
+    />
+
+    <ul>
+      <li>
+        <a href="http://127.0.0.1:5500/index.html#home" class="active">Home</a>
+      </li>
+    </ul>
+
+    <!--Bouw een navigatiebalk door gebruik te maken uit een lijst dat bestaat uit de volgende onderdelen:-->
+
+    <ul>
+      <li><a href="#tigers">Tigers</a></li>
+      <li><a href="#lions">Lions</a></li>
+      <li><a href="#monkeys">Monkeys</a></li>
+      <li><a href="#hippopotaumus">Hippopotaumus</a></li>
+    </ul>
+
+    <!--15,text-headers en de paragraaf tags-->
+    <h2>HTML Elementen</h2>
+    <h2>Mijn eerste website</h2>
+    <h3>Mij eerste sub-kop</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quisquam
+      iusto quia harum, officia rerum fugit repellendus optio, numquam et ad
+      vero ullam deserunt? Cupiditate ratione iure officiis? Laborum, odio.
+    </p>
+
+    <h2>Mijn tweede sub-kop</h2>
+
+    <h4 id="tigers">Tigers</h4>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus officia
+      earum ad, architecto commodi molestiae consequuntur nulla pariatur
+      laboriosam illo. Exercitationem cum qui fuga tempore, iure fugiat neque
+      ipsum cumque quidem, omnis molestiae dignissimos nisi delectus quis eos
+      velit itaque maxime voluptates a sequi et dolor possimus, reprehenderit
+      sunt. Quas nesciunt debitis, nobis cumque voluptatem minima sunt eveniet
+      eligendi officia asperiores illo sequi itaque vitae cupiditate, facilis
+      pariatur quae voluptatum exercitationem! Et, nostrum alias natus deleniti
+      eveniet excepturi eos accusantium optio provident sint molestiae quisquam
+      sapiente nam voluptas totam minus expedita libero nihil quae illo commodi
+      modi quasi! Reiciendis, natus.
+    </p>
+
+    <h4 id="lions">Lions</h4>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quis
+      sapiente molestias, maiores hic unde velit placeat fugiat minus maxime
+      facilis modi ullam facere accusamus obcaecati voluptates deserunt culpa
+      sed repellat aspernatur quos! Aliquid tenetur, veniam sunt eius fugit
+      quidem expedita autem. Minus cupiditate, ipsam porro magnam id ratione
+      quae deserunt sapiente quasi. Ipsum voluptas, necessitatibus dolorem odio
+      quae impedit placeat reiciendis voluptate ullam, expedita nostrum sunt
+      facilis unde quibusdam. Corporis nulla id harum, impedit provident esse
+      iste laborum nostrum assumenda veniam eaque perferendis doloremque earum,
+      nisi cupiditate quidem sequi eligendi! Repellat nam tempora, quod
+      cupiditate a modi facilis deserunt.
+    </p>
+    <h4 id="monkeys">Monkeys</h4>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+      necessitatibus assumenda omnis expedita maxime quasi quod est modi tenetur
+      quia ut deserunt magnam itaque laudantium incidunt pariatur, commodi amet
+      similique molestiae ab velit? Sint necessitatibus reiciendis, sit beatae
+      iste, voluptatum pariatur incidunt odit facilis, iure quas! Libero
+      accusantium ex velit placeat! Magni, amet quae? Adipisci neque non
+      possimus nesciunt magnam vitae, temporibus quaerat aspernatur consectetur
+      voluptatem pariatur totam ad repellat explicabo laborum itaque
+      perspiciatis nisi optio quis vero officiis sequi illum. Neque quia
+      reprehenderit laboriosam animi, et facilis eveniet doloribus ut ratione
+      maiores velit qui sed praesentium facere omnis inventore!
+    </p>
+
+    <h4 id="hippopotaumus">Hippopotaumus</h4>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum rem odit
+      sint quos eligendi blanditiis, cupiditate dolore commodi. Vitae, debitis
+      non. Perspiciatis deserunt quae, commodi accusantium ut iure alias laborum
+      eligendi corporis harum voluptate accusamus iusto architecto quo, dolore
+      error consequatur nulla. Ad non consectetur deserunt modi molestiae
+      tempora eum a quis. Rerum odit eos dolorem hic iste facilis sed et cum qui
+      voluptatum distinctio magni, blanditiis quae nihil minima neque molestiae
+      dolor quod, ratione cumque optio consequuntur vero. Vel ut impedit amet
+      possimus. Aut, enim blanditiis inventore nam praesentium quos id illum
+      reiciendis dicta. Fuga assumenda reiciendis et impedit.
+    </p>
+    <!-- Horizontal rule -->
+    <hr />
+    <h4>Audio</h4>
+    <!--de audio:op repeat te zetten. Tip: gebruik controls attribute om audio af te spelen.controls
+Wordt gebruikt in de tag om een afspeel, pauzeer en volume knop toe te voegen. autoplay    
+Wordt gebruikt om automatisch te starten.
+Een audio bestand heeft verschillende formaten. Niet alle formaten worden ondersteund door de browser. Hiervoor is een oplossing voor. 
+7. Speel een audio bestand af met <source> tag. Leg uit wat hier het voordeel van is.
+-->
+    <audio controls autoplay loop>
+      <source src="audio/horse.mp3" type="audio/mpeg" />
+    </audio>
+    <p>
+      type="audio/ogg"<br />type="audio/mpeg"<br />Het voordeel is dat je met
+      het source element meerdere formats kan specificeren als reserve voor het
+      geval de browser één ervan niet ondersteunt.
+    </p>
+    <h4>Video</h4>
+    <!--<p>Zoek een willekeurig video en sla dit op in je computer. Laadt dit bestand in als een video op het scherm.
+    
+    Tip: De video is veel groter dan het scherm. Zoek uit welke attribuut je voor de video element kan gebruiken om de grootte van de video aan te passen.
+    
+    </p>-->
+
+    <!-- 
+    Zoek uit welke attribuut je voor de video element kan gebruiken om de grootte van de video aan te passen.
+    Een video bestand heeft verschillende formaten. Niet alle formaten worden ondersteund door de browser. Hiervoor is een oplossing voor. 
+    -->
+
+    <h4>HTML video height Attribute</h4>
+    <video width="400" height="200" controls>
+      <source src=
+      https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.mp4
+      type="video/mp4"> <source src=
+      https://media.geeksforgeeks.org/wp-content/uploads/20190616234019/Canvas.move_.ogg
+      type="video/ogg">
+    </video>
+    <!--<p>Speel een video bestand af met source tag. Leg uit wat hier het voordeel van is.</p>
+    <p>Het voordeel is dat je met het source element meerdere formats kan specificeren als reserve voor het geval de browser één ervan niet ondersteunt.
+    </p>
+  -->
+    <h4>Image</h4>
+    <p>Voor afbeeldingen voor het web zijn 4 geschikte formaten:</p>
+
+    <p>
+      gif: geschikt voor afbeeldingen met vlakken, zoals logo's. Supported:
+      Chrome, Edge, Firefox, IE, Opera, Safari.
+    </p>
+    <p>
+      jpeg (jpg): geschikt voor afbeeldingen met veel kleuren, zoals foto's.
+      Support: Chrome, Edge, Firefox, IE, Opera, Safari.
+    </p>
+    <p>
+      png: geschikt voor alle soorten afbeeldingen (combinatie van gif en jpeg).
+      Support: Chrome, Edge, Firefox, IE, Opera, Safari.
+    </p>
+    <p>
+      svg: geschikt voor schaalbare afbeeldingen, zoals logo's. Support: Chrome,
+      Edge, Firefox, IE, Opera, Safari.
+    </p>
+    <p>
+      Een belangrijk kenmerk van gif en png is dat zij ook transparantie
+      ondersteunen. Png lijkt dus het ideale formaat
+    </p>
+
+    5. The required alt attribute provides an alternate text for an image, if
+    the user for some reason cannot view it (because of slow connection, an
+    error in the src attribute, or if the user uses a screen reader). The value
+    of the alt attribute should describe the image. If a browser cannot find an
+    image, it will display the value of the alt attribute. A screen reader is a
+    software program that reads the HTML code, and allows the user to "listen"
+    to the content. Screen readers are useful for people who are visually
+    impaired or learning disabled.
+
+    <!-- 17-18, 4 attributen een link tag kan hebben:he target attribute specifies where to open the linked document.The target attribute can have one of the following values:
+_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window-->
+
+    <hr />
+
+    <!--9.List tags: "Unordered/ Ordered"-->
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ol>
+
+    <ol>
+      <li>item 1</li>
+      <li>
+        item 2
+        <ol>
+          <li>sub item 1</li>
+          <li>sub item 2</li>
+        </ol>
+      </li>
+      <li>item 3</li>
+    </ol>
+
+    <h4>An Unordered HTML List</h4>
+
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+
+    <h5>A Nested List</h5>
+
+    <ul>
+      <li>item 1</li>
+      <li>
+        item 2
+        <ol style="list-style-type: circle">
+          <!--maar styling doen we in CSS!-->
+          <li>sub item 1</li>
+          <li>sub item 2</li>
+        </ol>
+      </li>
+      <li>item 3</li>
+    </ul>
+
+    <ul>
+      <li>item 1</li>
+      <li>
+        item 2
+        <ol>
+          <li>sub item 1</li>
+          <li>sub item 2</li>
+        </ol>
+      </li>
+      <li>item 3</li>
+    </ul>
+
+    <footer>
+      <h4>Footer</h4>
+      <p>
+        Deze website is gebouwd vanuit de
+        <a href="https://techgrounds.nl" target="_blank">TechGrounds Academy</a>
+      </p>
+
+      <!-- Onderzoek welke 4 attributen een link tag kan hebben:
+_blank Opent het gekoppelde document in een nieuw venster of tabblad
+_self Opent het gekoppelde document in hetzelfde frame waarin erop werd geklikt (dit is standaard)
+_parent Opent het gekoppelde document in het bovenliggende frame
+_top Opent het gekoppelde document in de volledige tekst van het venster framename Opent het gekoppelde document in het genoemde iframe-->
+      <!--4.An absolute file path is the full URL to a file-->
+      <img
+        src="https://techgrounds.nl/wp-content/uploads/2020/10/cropped-TG_Logo.d5934b2d-1-300x53.png"
+        alt="TechGrounds logo"
+      />
+    </footer>
+  </body>
+</html>

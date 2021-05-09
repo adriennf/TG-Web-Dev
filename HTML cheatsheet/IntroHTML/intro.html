@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro HTML</title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="http://127.0.0.1:5500/index.html#home" class="active">Home</a>
+      </li>
+    </ul>
+
+    <h2>Intro</h2>
+
+    <h3>Wat is het verschil tussen het internet en het world wide web?</h3>
+
+    <p>
+      Internet is the backbone of the Web, the technical infrastructure that
+      makes the Web possible. At its most basic, the Internet is a large network
+      of computers which communicate all together. Among those computers, some
+      computers (called Web servers) can send messages intelligible to web
+      browsers. The Internet is an infrastructure, whereas the Web is a service
+      built on top of the infrastructure. -MDN
+    </p>
+    <h3>2. Wat is het verschil tussen HTML, CSS en JavaScript?</h3>
+    <p>
+      Hypertext Markup Language (HTML) is the code that you use to structure
+      your web content and give it meaning and purpose. Cascading Stylesheets
+      (CSS) is the code that you use to style your website. JavaScript is the
+      programming language that you use to add interactive features to your
+      website. Some examples could be games, things that happen when buttons are
+      pressed or data is entered in forms, dynamic styling effects, animation,
+      and much more.
+    </p>
+    <h3>
+      3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en
+      hoe sluit je een HTML tag. Maak hiervoor voorbeelden en leg uit.
+    </h3>
+    <img
+      src="img/536AD01D-F77F-4983-BA64-7AAF82EF6482_4_5005_c.jpeg"
+      alt="The anatomy of an element"
+    />
+    <p>
+      A typical element includes an opening tag with some attributes, enclosed
+      text content, and a closing tag.
+    </p>
+
+    <h3>
+      4. HTML gebruikt basis tags om structuur op te bouwen. De &lt;html&gt;,
+      &lt;head&gt;, &lt;body&gt;. Geef voor elke element aan waarvoor het dient.
+    </h3>
+
+    <p>
+      The HTML &lt;html&gt; element represents the root (top-level element) of
+      an HTML document, so it is also referred to as the root element. All other
+      elements must be descendants of this element. The HTML &lt;body&gt;
+      element represents the content of an HTML document. There can be only one
+      &lt;body&gt; element in a document. The HTML &lt;head&gt; element contains
+      machine-readable information (metadata) about the document, like its
+      title, scripts, and style sheets.
+    </p>
+    <h3>
+      5. Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen
+      ? Geef minimaal 5 attributen en maak voorbeelden waar je de attributen in
+      toepast.
+    </h3>
+    <p>
+      An attribute extends an element, changing its behavior or providing
+      metadata.<br />
+      An attribute always has the form name="value" (the attribute's identifier
+      followed by its associated value).<br />
+    </p>
+
+    <p>
+      -alt Alternative text in case an image can't be displayed.(see image of an
+      element)<br />
+      -src attribute specifies the path to the image to be displayed. (see image
+      of an element)<br />
+      -href The URL of a linked resource.(see navigation link: Home at top of
+      tha page><br />
+      -The lang attribute inside the html tag, to declare the language of the
+      Web page. This is meant to assist search engines and browsers. (see on top
+      of the page)<br />
+      -The rowspan attribute specifies the number of rows a cell should span.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2">The table header</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>The table body</td>
+          <td>with two columns</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3>
+      6. Waarom is een goede HTML Structuur belangrijk? Is deze code een goede
+      structuur? Leg uit.
+    </h3>
+    <p>
+      <a
+        href="https://developer.mozilla.org/nl/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure"
+        >see here</a
+      ><br />
+      Behalve de definitie van individuele delen van je pagina (zoals "een
+      paragraaf" of "een afbeelding"), biedt HTML ook een aantal elementen op
+      blokniveau aan waarmee je gebieden van je website kan definiëren (zoals
+      "de hoofding", "het navigatiemenu" en "de kolom met de belangrijkste
+      inhoud").
+
+      <!--nee, er zit een blok tekst, zonder structuur. Denk aan paragraaf, lijsten: ordered, unordered
+      het is belangrijk dat je de semantiek respecteert en dat je het juiste element voor de juiste job gebruikt.-->
+
+      (header) Dit is waar je de belangrijkste en bekendste informatie vindt, en
+      meestal wordt die constant over alle webpagina's van je website
+      weergegeven. (navigation bar) De navigatiebalk bevat links naar de
+      belangrijkste secties van de site. Meestal worden die weergegeven door
+      menuknoppen, links of tabpagina's. Zoals de hoofding blijft de inhoud
+      meestal constant op alle webpagina's. Als de navigatie op je website niet
+      consistent is, zal dit enkel tot verwarde en gefrustreerde gebruikers
+      leiden. Vele webontwikkelaars beschouwen de navigatiebalk als onderdeel
+      van de hoofding in plaats van als een individueel onderdeel, maar dat is
+      geen vereiste. In feite zijn er ook die vinden dat het beter is om de twee
+      gescheiden te houden omdat ze zo veel toegankelijker zijn voor
+      schermlezers, die de twee onderdelen beter kunnen lezen als ze apart in de
+      website bestaan. (main content) Dit is een groot gebied in het midden van
+      de pagina die de meeste unieke inhoud van de webpagina bevat zijbalk
+      (sidebar) In de zijbalk staan links, perifere info, citaten, advertenties
+      enz. Meestal bevinden de belangrijkste en de perifere inhoud zich binnen
+      dezelfde context (Op de pagina van een nieuwsartikel bijvoorbeeld kan de
+      zijbalk een biografie van de auteur bevatten of links naar gerelateerde
+      artikelen). Er zijn ook pagina's waarin de zijbalk wordt gebruikt voor
+      terugkerende elementen zoals een secundair navigatiesysteem. (footer) Een
+      band die langs de onderkant van de pagina loopt en die in het algemeen de
+      kleine lettertjes bevat, auteursrechtvermeldingen of contactinformatie.
+      Het is een plek waar je algemene informatie kan plaatsen (zoals in de
+      hoofding) maar die dan meestal niet van al te groot belang is of gewoon
+      ondergeschikt aan de info die je in de belangrijkste inhoud terugvindt. De
+      voettekst wordt soms ook voor SEO (en-US)-doeleinden gebruikt door links
+      te verschaffen die zorgen voor een snelle toegang tot populaire inhoud.
+    </p>
+
+    <h3>7. Wat is het verschil tussen inline en block elementen?</h3>
+
+    <p>
+      In an inline formatting context, boxes are laid out horizontally, one
+      after the other, beginning at the top of a containing block. Horizontal
+      margins, borders, and padding are respected between these boxes. The boxes
+      may be aligned vertically in different ways: their bottoms or tops may be
+      aligned, or the baselines of text within them may be aligned. The
+      rectangular area that contains the boxes that form a line is called a line
+      box.
+    </p>
+
+    <p>
+      In a block formatting context, boxes are laid out one after the other,
+      vertically, beginning at the top of a containing block. The vertical
+      distance between two sibling boxes is determined by the 'margin'
+      properties. Vertical margins between adjacent block-level boxes in a block
+      formatting context collapse. In a block formatting context, each box's
+      left outer edge touches the left edge of the containing block (for
+      right-to-left formatting, right edges touch).
+    </p>
+
+    <h3>8. Wat betekent nesting? Codeer een voorbeeld met nesting erin.</h3>
+    <p>
+      HTML elements can be nested (this means that elements can contain other
+      elements). <br />
+      &lt;div&gt;<br />
+      &lt;p&gt;I am a child&lt;/p&gt;<br />
+      &lt;/div&gt;
+    </p>
+
+    <h3>Semantics</h3>
+
+    <p>
+      Semantics refers to the correct interpretation of the meaning of a word or
+      sentence. To use a word semantically is to use it in a way that is
+      properly aligned with the meaning of the word. When we misuse a word we
+      are not using it semantically. Many HTML tags have semantic meaning. That
+      is, the element itself conveys some information about the type of content
+      contained between the opening and closing tags. The semantic meaning of an
+      h1 tag is that it is used to identify the most important header of a
+      specific web page or section. For example, when a browser encounters an h1
+      heading it interprets that tag to mean that the contents of the h1 element
+      constitute the most important heading of the section that contains the
+      element. When writing semantic markup, we use HTML tags to tell browsers
+      something about the contents of the element. The tags themselves become a
+      way to tell a machine (whether a browser, a computer, a smartphone, or
+      another smart device) something about the meaning of the content.
+      https://html.com/semantic-markup/
+    </p>
+
+    <h3>10. Wat voor content zou je in de volgende elementen gebruiken?</h3>
+
+    <p>
+      header: A container to be used for a web page header which typically
+      contains the site logo, heading elements, and site navigation.
+    </p>
+
+    <p>
+      footer: A container to be used for a web page footer which typically
+      contains authorship, contact, and copyright information in addition to
+      navigational links and a link back to the top of the web page.
+    </p>
+
+    <p>
+      main: A high-level element used to contain all of the content that is
+      unique to a single web page and not repeated across multiple web pages,
+      such as headers, footers, and primary navigation elements.
+    </p>
+
+    <p>
+      nav: An element to contain blocks of site navigation links. This element
+      is typically placed in the page header and footer, and may also be used in
+      an aside (sidebar) element as well.
+    </p>
+
+    <p>
+      section: The section element is used to mark off sections of a document,
+      such as chapters or major sections of a long form post.
+    </p>
+
+    <p>
+      aside: Use to identify content that is related to the main content on the
+      page but not part of the primary flow of the document. For example, the
+      aside element may contain a glossary definition of a term that appears in
+      a blog post or it may contain advertisements related to the contents of
+      the page.
+    </p>
+
+    <p>
+      article: The article element is used to identify a block of content
+      suitable for reuse and syndication in other settings, such as a blog post
+      or technical article.
+    </p>
+
+    <h3>
+      11. Onderzoek en leg uit waarom headers zowel belangrijk zijn voor
+      zoekmachines als voor de gebruikers.
+    </h3>
+    <p>
+      Zij maken een document gemakkelijker leesbaar door een groot document in
+      kleinere delen op te splitsen, waarbij elk deel een titel heeft met een
+      andere opmaak (grotere tekst, vet, enz.) dan de rest van het document.
+    </p>
+    <p>
+      Het gebruik van headers is belangrijk voor zoekmachines en de gebruikers
+      van je website. Google gebruikt deze tag namelijk om te bepalen waar de
+      pagina over gaat. Het gebruik van headers geeft aan welke delen van de
+      content belangrijk zijn en geven aan hoe ze onderling met elkaar verbonden
+      zijn. Het is belangrijk dat je headers informatief zijn. Door header tags
+      te gebruiken creeer je kwalitatief betere teksten die eenvoudiger te lezen
+      zijn. Goede teksten zijn weer beter voor de lezer en daarom beter voor je
+      SEO.<br />
+      Belangrijkste Punten Om Te Onthouden:<br />
+      Neem het voor jou meest belangrijke zoekwoord op in je H1 Header Tag
+      Google adviseert om de H1 header tag slechts een keer per pagina te
+      gebruiken Breng structuur aan in je pagina door verschillende type Headers
+      te gebruiken De H1 wordt vaak gebruikt als de titel van een pagina, H2
+      headers geven een paragraaf aan Maak de headers niet te lang We raden aan
+      om slechts 60 karakters of minder te gebruiken
+    </p>
+
+    <h3>Heading opdrachten</h3>
+
+    <p>
+      Headings are block-level elements, and they come in six different
+      rankings, h1 through h6. Headings help to quickly break up content and
+      establish hierarchy, and they are key identifiers for users reading a
+      page. They also help search engines to index and determine the content on
+      a page.
+    </p>
+
+    <p>
+      Headings should be used in an order that is relevant to the content of a
+      page. The primary heading of a page or section should be marked up with an
+      h1 element, and subsequent headings should use h2, h3, h4,h5, and h6
+      elements as necessary.
+    </p>
+
+    <p>
+      Each heading level should be used where it is semantically valued, and
+      should not be used to make text bold or big—there are other, better ways
+      to do that.
+    </p>
+    <p>header vs. head vs. h1 through h6 Elements</p>
+
+    <p>
+      It is easy to confuse the header element with the head element or the
+      heading elements, h1 through h6. They all have different semantic meanings
+      and should be used according to their meanings. For reference…
+    </p>
+
+    <p>
+      header element is a structural element that outlines the heading of a
+      segment of a page. It falls within the body element.
+    </p>
+
+    <p>
+      The head element is not displayed on a page and is used to outline
+      metadata, including the document title, and links to external files. It
+      falls directly within the html element.
+    </p>
+
+    <p>
+      Heading elements, h1 through h6, are used to designate multiple levels of
+      text headings throughout a page.
+    </p>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <h3>Paragrafen</h3>
+    <p>
+      The p tag defines a paragraph. Browsers automatically add a single blank
+      line before and after each p element. This is some text in a paragraph.
+      Paragraphs are usually represented in visual media as blocks of text
+      separated from adjacent blocks by blank lines and/or first-line
+      indentation, but HTML paragraphs can be any structural grouping of related
+      content, such as images or form fields. Paragraphs are block-level
+      elements, and notably will automatically close if another block-level
+      element is parsed before the closing p tag. The end tag may be omitted if
+      the p element is immediately followed by an address, article, aside,
+      blockquote, div, dl, fieldset, footer, form, h1, h2, h3, h4, h5, h6,
+      header, hr, menu, nav, ol, pre, section, table, ul or another p element,
+      or if there is no more content in the parent element and the parent
+      element is not an a element.
+    </p>
+
+    <p>
+      Onderzoek en leg het verschil tussen het stoppen van alle tekst in één
+      paragraaf tag, en het opsplitsen van de tekst in meerdere tags uit.
+    </p>
+
+    <p>
+      Na het interpreteren van een tekst, kunnen we keuzes maken of we die gaan
+      splitsen of als een blok tekst gebruiken.
+    </p>
+  </body>
+</html>

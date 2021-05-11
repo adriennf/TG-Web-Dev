@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors example</title>
+    <link rel="stylesheet" href="CSS Selectors example.css" />
+  </head>
+  <body>
+    <h1>CSS Selectors</h1>
+    <ul class="no-bullets">
+      <li>Simple selectors (select elements based on name, id, class)</li>
+      <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+      <li>Pseudo-class selectors (select elements based on a certain state)</li>
+      <li>Pseudo-elements selectors (select and style a part of an element)</li>
+      <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+    </ul>
+    <h2 id="special">
+      The id of an element is unique within a page, so the id selector is used
+      to select one unique element!
+    </h2>
+    <h4>The element selector</h4>
+    <p>
+      The element selector selects HTML elements based on the element name.
+      Every paragraph and the h3 will be affected by the style color red.
+    </p>
+    <p>
+      The universal selector (*) selects all HTML elements on the page by
+      text-align: center.
+    </p>
+    <p class="color">Paragraph, affected by a class: color purple.</p>
+
+    <section class="bgcolor large">
+      HTML elements can also refer to more than one class. This section refers
+      to two classes: background-color and font-size.
+    </section>
+    <br />
+
+    <h3>The CSS Grouping Selector</h3>
+    <p>
+      The grouping selector selects all the HTML elements with the same style
+      definitions. To group selectors, separate each selector with a comma: h3,
+      p.
+    </p>
+    <div>
+      <h4>Descendant selector (space)</h4>
+      <p>
+        The descendant selector matches all elements that are descendants of a
+        specified element. The element element selector is used to select elements inside elements.
+      </p>
+
+      <p>
+        The following example selects all &lt;p&gt; elements inside &lt;div&gt;
+        elements: font-family:fantasy
+      </p>
+    </div>
+    <div>
+      <h4>Child Selector (>)</h4>
+      <q
+        >The child selector selects all elements that are the children of a
+        specified element. The element>element selector is used to select
+        elements with a specific parent. The following example selects all
+        &lt;q&gt; elements, an quotation, that are children of a &lt;div&gt;
+        element.</q
+      >
+    </div>
+    <p>
+      <a href="ExampleAdjacentSibling.html">Adjacent Sibling Selector (+)</a><br>
+      The element+element selector is used to select an element that is directly after another specific element.
+    </p>
+    <p>
+      <a href="./ExampleGeneralSibling.html">General Sibling Selector (~)</a><br>
+      The element1~element2 selector matches occurrences of element2 that are preceded by element1.
+      Both elements must have the same parent, but element2 does not have to be immediately preceded by element1.
+    </p>
+    
+   
+    <h4>Pseudo-classes</h4>
+    
+    <p>The syntax of pseudo-classes:<br>
+      selector:pseudo-class {<br>
+      property: value;<br>
+    }</p>
+    <p>The double colon replaced the single-colon notation for pseudo-elements in CSS3. </p>
+    <h5>Anchor Pseudo-classes</h5>
+    <p>mouse over link: color: hot pink</p>
+    <p>Mouse over the div element below to change its background color:</p>
+
+<div>Mouse Over Me</div>
+  
+    <p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+
+
+    <h4>Pseudo-elements</h4>
+    <p>
+      A CSS pseudo-element is used to style specified parts of an element.<br />
+      For example: style the first letter, or line, of an element<br />
+      Insert content before, or after, the content of an element<br />
+      The syntax of pseudo-elements: selector::pseudo-element {<br />
+      property: value;<br />
+      }
+     
+
+    <ul class="no-bullets">
+      <li>
+        The ::first-line pseudo-element<br />
+        is used to add a special style to the first line of a text and can only
+        be applied to block-level elements.
+      </li>
+    </ul>
+    <p>
+      Selector: p::first-letter, selects the first letter of all &lt;p&gt;
+      elements.
+    </p>
+    <p><a href="https://www.w3schools.com/cssref/trysel.asp">Greetings from W3 School</a><p
+    
+
+   
+  </body>
+</html>

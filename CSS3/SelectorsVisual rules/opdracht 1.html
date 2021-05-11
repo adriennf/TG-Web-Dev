@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS opdracht 1</title>
+</head>
+<body>
+    <h1> Ways to Insert CSS</h1>
+<p>There are three ways of inserting a style sheet:</p>
+
+<ul>
+    <li>External CSS</li>
+    <li>Internal CSS</li>
+    <li>Inline CSS</li>
+</ul>
+
+<h3>External CSS</h3>
+<p>With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+
+    Each HTML page must include a reference to the external style sheet file inside the &lt;link &gt; element, inside the head section.</p>
+<p>&lt;head&gt;<br>
+    &lt;link rel="stylesheet" href="mystyle.css"&gt;<br>
+    &lt;/head&gt;
+</p>
+<p>An external style sheet can be written in any text editor, and must be saved with a .css extension.
+
+    The external .css file should not contain any HTML tags.</p>
+    <p>Note: Do not add a space between the property value and the unit (such as margin-left: 20 px;). The correct way is: margin-left: 20px;</p>
+<h3>Internal CSS</h3>
+<p>An internal style sheet may be used if one single HTML page has a unique style.
+
+    The internal style is defined inside the &lt;style&lt; element, inside the head section.</p>
+
+    &lt;head&gt;<br>
+    &lt;style&gt;<br>
+        body {<br>
+          background-color: linen;<br>
+        }<br>
+        &lt;/style&gt;<br>
+        &lt;/head&gt;<br>
+        <h3>Inline CSS</h3>
+            <p>An inline style may be used to apply a unique style for a single element.
+
+                To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+        <p>&lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;
+    </p>
+    <p>Tip: An inline style loses many of the advantages of a style sheet (by mixing content with presentation). Use this method sparingly.</p>
+    <p>Professional web developers do not use inline styles often, but there are times when they are important to understand or necessary to use.</p>
+    <ul>
+        <li>HTML e-mail</li>
+        <li>Older websites</li>
+        <li>CMS content (e.g. WordPress, Drupal)</li>
+        <li>Dynamic content (i.e. HTML created or changed by JavaScript)</li>
+    </ul>
+    <p>Multiple Style Sheets<br>
+        If some properties have been defined for the same selector (element) in different style sheets, the value from the last read style sheet will be used. </p>
+
+<h3>Cascading Order</h3>
+<p>What style will be used when there is more than one style specified for an HTML element?<br>
+
+    All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:<br>
+    
+    <ol>
+        <li>Inline style (inside an HTML element)</li>
+        <li>External and internal style sheets (in the head section)</li>
+        <li>Browser default</li>
+    </ol>
+    So, an inline style has the highest priority, and will override external and internal styles and browser defaults.</p>
+
+</body>
+</html>

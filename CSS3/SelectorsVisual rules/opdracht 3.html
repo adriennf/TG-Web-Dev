@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS opdracht 3</title>
+</head>
+<body>
+   
+<h1>Er zijn verschlilende selectors</h1>
+<h3>.class Selector</h3>
+<p>The .class selector selects elements with a specific class attribute.<br>
+
+    To select elements with a specific class, write a period (.) character, followed by the name of the class.<br>
+    
+    You can also specify that only specific HTML elements should be affected by a class. To do this, start with the element name, then write the period (.) character, followed by the name of the class.<br>
+    
+    HTML elements can also refer to more than one class. </p>
+    <p>Example<br>
+        Select and style all elements with class="intro":<br>
+
+        .intro { <br>
+          background-color: yellow;<br>
+        }</p>
+    <p>This &lt;p&gt; element wlil be styled according to class="center" AND to class="large":<br>
+
+        &lt;p class="center large">This paragraph refers to two classes.&lt;/p&gt;</p>
+<h3>Type Selector</h3>
+    <p>
+        A Type Selector (sometimes referred to as an Element Type Selector) matches elements with the corresponding element node name, such as &lt;p&gt;, &lt;span&gt;, and &lt;div&gt; tags. In other words, it selects all elements of the given type within a document.
+    </p>
+    <p>/* All &lt;a&gt; elements. */<br>
+        a {<br>
+          color: red;<br>
+        }</p>
+        <p>It is generally considered poor practice to apply fine detali changes with a Type Selector alone. </p>
+        <p>However, with a Type Selector such as body { }, setting a default font-size and line-height is common. This is due in part to the fact that there can only be one &lt;body&gt; tag on any given page, so there are fewer opportunities for conflicts.</p>
+
+ <h3>CSS Combinators</h3>
+ <p>A combinator is something that explains the relationship between the selectors.</p>
+<p>A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator.<br>
+
+    There are four different combinators in CSS:
+    <ul>
+        <li>descendant selector (space)</li>
+        <li>chlid selector (>)</li>
+        <li>adjacent sibling selector (+)</li>
+        <li>general sibling selector (~)</li>
+    </ul>
+    
+    
+</p>
+ <h3>Descendant Selector</h3>
+ <p>The descendant selector matches all elements that are descendants of a specified element.<br>
+
+    The following example selects all &lt;p&gt; elements inside &lt;div&gt; elements:
+    
+    
+    <p>div p {<br>
+      background-color: yellow;<br>
+    }
+</p>
+<p>CSS selectors are used to "find" (or select) the HTML elements you want to style.<br>
+
+    We can divide CSS selectors into five categories:
+    <ul>
+        <li>Simple selectors (select elements based on name, id, class)</li>
+        <li>Combinator selectors (select elements based on a specific relationship between them)</li>
+        <li>Pseudo-class selectors (select elements based on a certain state)</li>
+        <li>Pseudo-elements selectors (select and style a part of an element)</li>
+        <li>Attribute selectors (select elements based on an attribute or attribute value)</li>
+    </ul>
+    
+    </p>
+    
+
+
+    
+</body>
+</html>

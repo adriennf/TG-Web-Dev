@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-model 1</title>
+</head>
+<body>
+    <h1>Eigenschappen van block boxes en inline boxes</h1>
+    <p>Every element in web design is a rectangular box.</p>
+    <p>block-level elements occupy any available width, regardless of their content, and begin on a new line. Inline-level elements occupy only the width their content requires and line up on the same line, one after the other. Block-level elements are generally used for larger pieces of content, such as headings and structural elements. Inline-level elements are generally used for smaller pieces of content, such as a few words selected to be bold or italicized.</p>
+<h3>Display</h3>
+<p>Every element has a default display property value; however, as with all other property values, that value may be overwritten. There are quite a few values for the display property, but the most common are block, inline, inline-block, and none.</p>
+<p>We can change an element’s display property value by selecting that element within CSS and declaring a new display property value. A value of block will make that element a block-level element.</p>
+<pre>p {
+    display: block;
+  }
+  <p>A value of inline will make that element an inline-level element. Not allows to set a width and height on the element,  the top and bottom margins/paddings are  not respected</p>
+  <pre>p {
+    display: inline;
+  }</pre>
+  <p>the inline-block value: will allow an element to behave as a block-level element, accepting all box model properties: allows to set a width and height, the top and bottom margins/paddings are respected. However, the element will be displayed in line with other elements, and it will not begin on a new line by default. It does not add a line-break after the element, so the element can sit next to other elements.</p>
+<pre>p {
+    display: inline-block;
+  }
+  </pre>
+  <p>using a value of none will completely hide an element and render the page as if that element doesn’t exist. Any elements nested within this element will also be hidden.</p>
+<pre>div {
+    display: none;
+  }</pre>
+</body>
+</html>

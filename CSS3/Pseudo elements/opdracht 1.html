@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo elements 1</title>
+    <style>
+      ::marker {
+        color: red;
+      }
+      ::selection {
+        color: red;
+        background: yellow;
+      }
+      li::first-letter {
+        color: red;
+        font-size: xx-large;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo-elementen</h1>
+    <pre>
+The syntax of pseudo-elements:
+
+        selector::pseudo-element {
+          property: value;
+        }</pre
+    >
+
+    <ul class="no-bullets">
+      <li>
+        The ::first-line pseudo-element<br />
+        is used to add a special style to the first line of a text and can only
+        be applied to block-level elements.
+        <pre>
+            font properties
+            color properties
+            background properties
+            word-spacing
+            letter-spacing
+            text-decoration
+            vertical-align
+            text-transform
+            line-height
+            clear</pre
+        >
+      </li>
+      <li>
+        Selector: p::first-letter, selects the first letter of all &lt;p&gt;
+        elements.
+      </li>
+      <li>
+        The ::before pseudo-element can be used to insert some content before
+        the content of an element.
+      </li>
+      <li>
+        The ::after pseudo-element can be used to insert some content after the
+        content of an element.
+      </li>
+      <li>
+        The ::selection pseudo-element matches the portion of an element that is
+        selected by a user.<br />
+
+        The following CSS properties can be applied to ::selection: color,
+        background, cursor, and outline.
+      </li>
+    </ul>
+  </body>
+</html>

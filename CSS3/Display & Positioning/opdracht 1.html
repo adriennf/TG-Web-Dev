@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display 1</title>
+  </head>
+  <body>
+    <p>
+      Je kunt bijvoorbeeld aangeven of je het element relatief ten opzichte van
+      de standaardpositie op de pagina wilt plaatsen of absoluut op basis van
+      het bovenliggende element. De top, right, bottom en left properties
+      bepalen de uiteindelijke locatie van geplaatste elementen.
+    </p>
+    <p>
+      Welke position values zijn er? Leg voor elke position values uit wat het
+      doet. Geef ook aan welke default position waarde elementen hebben die je
+      gebruikt in html.
+    </p>
+    <h3>Values</h3>
+    <p>Static</p>
+    <p>
+      The element is positioned according to the normal flow of the document.
+      The top, right, bottom, left, and z-index properties have no effect. This
+      is the default value.
+    </p>
+    <p>relative</p>
+    <p>
+      The element is positioned according to the normal flow of the document,
+      and then offset relative to itself based on the values of top, right,
+      bottom, and left. The offset does not affect the position of any other
+      elements; thus, the space given for the element in the page layout is the
+      same as if position were static.
+    </p>
+    <p>
+      This value creates a new stacking context when the value of z-index is not
+      auto. Its effect on table-*-group, table-row, table-column, table-cell,
+      and table-caption elements is undefined.
+    </p>
+    <p>absolute</p>
+    <p>
+      The element is removed from the normal document flow, and no space is
+      created for the element in the page layout. It is positioned relative to
+      its closest positioned ancestor, if any; otherwise, it is placed relative
+      to the initial containing block. Its final position is determined by the
+      values of top, right, bottom, and left. This value creates a new stacking
+      context when the value of z-index is not auto. The margins of absolutely
+      positioned boxes do not collapse with other margins.
+    </p>
+    <p>fixed/ sticky</p>
+    <p>
+      An element with position: fixed; is positioned relative to the viewport,
+      which means it always stays in the same place even if the page is
+      scrolled. The top, right, bottom, and left properties are used to position
+      the element. A fixed element does not leave a gap in the page where it
+      would normally have been located
+    </p>
+    <p>
+      Note: Internet Explorer does not support sticky positioning. Safari
+      requires a -webkit- prefix (see example below). You must also specify at
+      least one of top, right, bottom or left for sticky positioning to work.
+    </p>
+    <q
+      >sticky { position: -webkit-sticky; /* Safari */ position: sticky; top: 0;
+      }
+    </q>
+    <h3>Overlapping Elements</h3>
+    <p>
+      The z-index property specifies the stack order of an element (which
+      element should be placed in front of, or behind, the others). An element
+      can have a positive or negative stack order. An element with greater stack
+      order is always in front of an element with a lower stack order.
+    </p>
+    <p>
+      e.g.Because the image has a z-index of -1, it will be placed behind the
+      text
+    </p>
+    <p>
+      Note: If two positioned elements overlap without a z-index specified, the
+      element positioned last in the HTML code will be shown on top.
+    </p>
+  </body>
+</html>

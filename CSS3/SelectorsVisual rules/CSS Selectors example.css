@@ -1,51 +1,46 @@
 * {
-    text-align: center;
-    
+  text-align: center;
 }
 ul.no-bullets {
   list-style-type: none;
 }
 #special {
-  
   color: orange;
 }
-p, h2 {
+p,
+h2 {
   color: red;
 }
 div p {
-  font-family:fantasy;
+  font-family: fantasy;
 }
 div > q {
-  color:rgb(54, 143, 179);
+  color: rgb(54, 143, 179);
 }
 .color {
- 
   color: purple;
 }
 section.bgcolor {
-  
   background-color: rgba(238, 222, 170, 0.466);
-
 }
 section.large {
-font-size: 150%;
+  font-size: 150%;
 }
 a[target] {
-    background-color: yellow;
-  }
-  /* mouse over link */
+  background-color: yellow;
+}
+/* mouse over link */
 a:hover {
-  color: #FF00FF;
+  color: #ff00ff;
 }
 div:hover {
   background-color: blue;
 }
-  li::first-line {
-    color:brown;
-    font-variant: small-caps;
-  }
-  p::first-letter {
-    font-style: oblique;
-    color: darkmagenta;
-
-  }
+li::first-line {
+  color: brown;
+  font-variant: small-caps;
+}
+p::first-letter {
+  font-style: oblique;
+  color: darkmagenta;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo elements 5</title>
+    <style>
+      .text {
+        position: relative;
+        width: 1000px;
+        height: 400px;
+        border: 1px solid black;
+        padding: 20px;
+        text-indent: 50px;
+        text-align: justify;
+        letter-spacing: 10px;
+      }
+
+      .text::before {
+        position: absolute;
+        display: block;
+        content: "";
+        background-image: url(../img/james-sutton-dQ5G0h7sLno-unsplash.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!--een voorbeeld van het gebruik van een pseudo-element ::before -->
+
+    <div class="text">
+      <p>
+        Push your water glass on the floor attack like a vicious monster furball
+        roll roll roll and give attitude love blinks and purr purr purr purr
+        yawn. Where is it? i saw that bird i need to bring it home to mommy
+        squirrel! sugar, my siamese, stalks me (in a good way), day and night ,
+        yet and sometimes switches in french and say "miaou" just because well
+        why not. Use lap as chair destroy couch as revenge hiss at vacuum
+        cleaner for hiding behind the couch until lured out by a feathery toy,
+        grass smells good. Lick the other cats sit in box or decide to want
+        nothing to do with my owner today. Damn that dog lick human with
+        sandpaper tongue but make muffins, but chew master's slippers tuxedo
+        cats always looking dapper. Flex claws on the human's belly and purr
+        like a lawnmower hunt by meowing loudly at 5am next to human slave food
+        dispenser eat a rug and furry furry hairs everywhere oh no human coming
+        lie on counter don't get off counter fooled again thinking the dog likes
+        me and caticus cuteicus. Pushes butt to face meow for food, then when
+        human fills food dish, take a few bites of food and continue meowing
+        climb a tree, wait for a fireman jump to fireman then scratch his
+        face...
+      </p>
+    </div>
+  </body>
+</html>

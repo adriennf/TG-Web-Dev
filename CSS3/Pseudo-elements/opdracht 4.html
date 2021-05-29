@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pseudo elements 4</title>
     <style>
-      .button {
+      .button,
+      .button-two {
         height: 56px;
-        width: 700px;
+        width: 500px;
         margin-left: 5%;
         border: none;
         background-color: teal;
@@ -18,8 +19,6 @@
         font-size: 16px;
         cursor: pointer;
         position: absolute;
-
-        /*border-left: 3px solid orange;*/
       }
       .button::before {
         content: "";
@@ -43,7 +42,7 @@
         border: none;
         background-color: teal;
         height: 56px;
-        width: 700px;
+        width: 500px;
         position: relative;
         z-index: -1;
       }
@@ -65,14 +64,52 @@
         top: 0;
         left: 0px;
       }
+      .button-two {
+        position: relative;
+        top: 30px;
+        border-left: 10px solid hotpink;
+        border-right: 10px solid hotpink;
+      }
+      .button-two::before {
+        content: "";
+        position: absolute;
+        background-color: hotpink;
+        width: 10%;
+        height: 10px;
+        bottom: 0;
+        right: 0;
+      }
+      .button-two::after {
+        content: "";
+        position: absolute;
+        background-color: hotpink;
+        width: 10%;
+        height: 10px;
+        top: 0;
+        left: 0;
+      }
     </style>
   </head>
   <body>
-    <button class="button" type="button" onclick="alert( 'You nailed it!') ">
-      BUTTON
-    </button>
-    <button class="styling"></button>
-
+    <div>
+      <button
+        class="button"
+        type="button"
+        onclick="alert( 'short corner lines') "
+      >
+        BUTTON
+      </button>
+      <button class="styling"></button>
+    </div>
+    <div>
+      <button
+        class="button-two"
+        type="button"
+        onclick="alert('long border line') "
+      >
+        BUTTON
+      </button>
+    </div>
     <!-- https://hollybourneville.medium.com/creating-border-lines-using-pseudo-elements-in-css-a460396299e8 -->
   </body>
 </html>

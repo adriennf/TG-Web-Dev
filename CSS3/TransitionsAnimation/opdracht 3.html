@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation 3</title>
+    <style>
+      .container {
+        border: 1px solid black;
+        padding: 1em;
+        width: 100vw;
+        position: relative;
+      }
+      .box1,
+      .box2,
+      .box3,
+      .box4,
+      .box5 {
+        display: block;
+        position: relative;
+        background-color: white;
+        border: 1px solid black;
+        width: 5em;
+        height: 5em;
+        margin: 2px;
+      }
+      .container:hover .box1,
+      .container:hover .box2,
+      .container:hover .box3,
+      .container:hover .box4,
+      .container:hover .box5 {
+        position: relative;
+        background-color: red;
+      }
+      .box1 {
+        transition: 2s ease-in-out;
+      }
+      .container:hover .box1 {
+        border-radius: 50%;
+        transform: translate(95vw, 0);
+      }
+      .box2 {
+        transition: 5s ease;
+      }
+      .container:hover .box2 {
+        border-radius: 25%;
+        transform: translate(95vw, 0);
+      }
+      .box3 {
+        transition: 3s ease-out;
+      }
+      .container:hover .box3 {
+        transform: translate(95vw, 0);
+      }
+      .box4 {
+        transition: 1s ease;
+      }
+      .container:hover .box4 {
+        transform: translate(95vw, 0);
+      }
+      .box5 {
+        transition: 1.8s cubic-bezier(0.42, 1.84, 0.83, -0.44);
+      }
+      .container:hover .box5 {
+        transform: translate(95vw, 0);
+      }
+      p {
+        text-align: center;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1"><p>1</p></div>
+      <div class="box2"><p>2</p></div>
+      <div class="box3"><p>3</p></div>
+      <div class="box4"><p>4</p></div>
+      <div class="box5"><p>5</p></div>
+    </div>
+  </body>
+</html>

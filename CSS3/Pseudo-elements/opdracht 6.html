@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo elements 6</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .dotBlack {
+        width: 100px;
+        height: 100px;
+        background: black;
+        border-radius: 50%;
+        position: relative;
+        margin: 20px;
+        color: white;
+        text-align: center;
+        
+      }
+      .dotBlack::before {
+        width: 50px;
+        height: 50px;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        content: ".";
+        font-size: medium;
+        top: 23px;
+        left: -25px;
+        transform: rotateZ(180deg);
+      }
+      .dotBlack::after {
+        width: 50px;
+        height: 50px;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 23px;
+        right: -25px;
+        content: ".";
+        font-size: medium;
+      }
+      p {
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        padding: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      
+      <div class="dotBlack"><p>1</p></div>
+    </div>
+    <div>
+      <div class="dotBlack"><p>2</p></div>
+    </div>
+    <div>
+      <div class="dotBlack"><p>3</p></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox 3</title>
+    <style>
+      .container {
+        display: flex;
+        background-color: rgb(255, 255, 204);
+        flex-direction: row;
+        justify-content: center;
+      }
+      .container div {
+        background-color: rgb(204, 255, 204);
+        margin: 10px;
+        padding: 15px 40px 15px 40px;
+      }
+      .div2 {
+        flex-grow: 4;
+      }
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div><p>1</p></div>
+      <div class="div2"><p>2</p></div>
+
+      <div><p>3</p></div>
+      <div><p>4</p></div>
+      <div><p>5</p></div>
+      <div><p>6</p></div>
+    </div>
+  </body>
+</html>

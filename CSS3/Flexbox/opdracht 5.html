@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox 5</title>
+    <style>
+      h2 {
+        text-align: center;
+      }
+
+      div {
+        background-color: greenyellow;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+      }
+
+      .container {
+        height: 200px;
+        width: 200px;
+        background-color: #fafca1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .container1 {
+        height: 200px;
+        width: 200px;
+        background-color: #fafca1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container2 {
+        height: 200px;
+        width: 200px;
+        background-color: #fafca1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      .container3 {
+        height: 200px;
+        width: 200px;
+        background-color: #fafca1;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+      }
+      .container4 {
+        height: 200px;
+        width: 200px;
+        background-color: #fafca1;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+      }
+
+      #item4 {
+        min-height: 50px;
+      }
+      #item6 {
+        min-height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>De property ‘align-items’</h2>
+    <p>Flex-start</p>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div id="item4">4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <p>Center</p>
+    <div class="container1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div id="item4">4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <p>Flex-end</p>
+    <div class="container2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div id="item4">4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <p>Stretch</p>
+    <div class="container3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div id="item4">4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+    <p>Baseline</p>
+    <div class="container4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div id="item4">4</div>
+      <div>5</div>
+      <div id="item6">6</div>
+    </div>
+  </body>
+</html>

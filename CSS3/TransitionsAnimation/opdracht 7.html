@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation 7</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 200px;
+        background-color: black;
+      }
+
+      .shapes {
+        width: 500px;
+        height: 500px;
+        animation: opdracht7 10s infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes opdracht7 {
+        0% {
+          background-color: orangered;
+        }
+        25% {
+          background-color: orange;
+          border-radius: 0 50% 0 0;
+          rotate: -45deg;
+        }
+        50% {
+          background-color: yellow;
+          border-radius: 0 50% 50% 0;
+        }
+        75% {
+          background-color: hotpink;
+          border-radius: 0 50% 50% 50%;
+          rotate: 45deg;
+        }
+        100% {
+          background-color: red;
+          border-radius: 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="shapes"></div>
+  </body>
+</html>

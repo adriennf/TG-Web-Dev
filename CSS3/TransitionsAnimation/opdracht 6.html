@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animatie 6</title>
+    <style>
+      body {
+        height: 100vh;
+        padding: 10rem;
+
+        overflow: hidden;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .cards {
+        display: flex;
+        position: absolute;
+      }
+      .card {
+        position: relative;
+        width: 15rem;
+        border-radius: 1rem;
+        background-color: rgb(250, 160, 238);
+        color: black;
+        padding: 2rem;
+        margin-left: -2rem;
+        box-shadow: 4px 4px 12px 2px rgba(87, 2, 58, 0.651);
+
+        transition: ease-in-out 1s;
+      }
+
+      .card:hover {
+        transform: translateY(-2rem);
+        margin-left: -5rem;
+        color: rgba(87, 2, 58, 0.651);
+      }
+
+      /* 'when you hover
+it I want to select all the rest of the
+elements that also match some selector
+and that's this little tilde it's like
+an adjacent sibling selector' */
+
+      .card:hover ~ .card {
+        transform: translateX(-4rem);
+      }
+
+      p {
+        text-align: center;
+        padding: 2rem;
+        font-size: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        text-shadow: 2px 2px;
+      }
+
+      footer {
+        padding-top: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <div class="card card1">
+        <date>Mei 20, 2021</date>
+        <h1>OKR's Cards</h1>
+        <footer>By Ruben Nieuwenhuis</footer>
+      </div>
+      <div class="card">
+        <date>Mei 20, 2021</date>
+        <h1>OKR's</h1>
+        <p>Personal 1</p>
+        <p></p>
+      </div>
+
+      <div class="card">
+        <date>Mei 20, 2021</date>
+        <h1>OKR's</h1>
+        <p>Personal 2</p>
+        <p></p>
+      </div>
+
+      <div class="card">
+        <date>Mei 20, 2021</date>
+        <h1>OKR's</h1>
+        <p>Professional 1</p>
+        <p></p>
+      </div>
+
+      <div class="card">
+        <date>Mei 20, 2021</date>
+        <h1>OKR's</h1>
+        <p>Professional 2</p>
+        <p></p>
+      </div>
+      <!--<div class="card back">
+        <date></date>
+        <h1></h1>
+        <p></p>
+        <p></p>
+      </div>-->
+    </div>
+  </body>
+</html>

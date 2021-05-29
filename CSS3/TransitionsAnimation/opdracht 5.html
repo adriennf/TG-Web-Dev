@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation 6</title>
+    <style>
+      .container {
+        border: 0.1em solid black;
+        width: 100vw;
+        height: 100vh;
+        padding: 10em;
+      }
+
+      .box {
+        width: 25em;
+        height: 25em;
+        border: 0.1em solid black;
+        background-color: honeydew;
+        position: relative;
+        background-image: url(../img/3-2-eyes-png-8_400x400.png);
+        z-index: -1;
+        transition: color 2s ease;
+      }
+      .container:hover .box {
+        background-color: chartreuse 2s;
+      }
+      .top {
+        width: 25.1em;
+        height: 25.1em;
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        transition: 3s;
+      }
+
+      .container:hover .top {
+        transform: rotate(20deg) translateX(25em);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

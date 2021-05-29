@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 4</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        .container {
+          display: flex;
+          background-color: rgb(255, 255, 204);
+          
+          justify-content: flex-start;
+        }
+        .container2 {
+          display: flex;
+          background-color: rgb(255, 255, 204);
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+        .container3 {
+          display: flex;
+          background-color: rgb(255, 255, 204);
+          flex-direction: row;
+          justify-content: center;
+        }
+        .container4 {
+          display: flex;
+          background-color: rgb(255, 255, 204);
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .container5 {
+          display: flex;
+          background-color: rgb(255, 255, 204);
+          flex-direction: row;
+          justify-content: space-around;
+        }
+        .container6 {
+          display: flex;
+          background-color: rgb(255, 255, 204);
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+
+        div
+        {
+          background-color: rgb(204, 255, 204);
+          padding: 20px;
+          margin: 10px;
+         
+        }
+        </style>
+</head>
+<body>
+    <h2>De property ‘justify-content’</h2>
+    <p>flex-start</p>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+      </div>
+      <p>flex-end</p>
+      <div class="container2">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+        <p>flex-center</p>
+        <div class="container3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+          </div>
+          <p>space-between</p>
+          <div class="container4">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+            </div>
+            <p>space-around</p>
+            <div class="container5">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+              </div>
+              <p>space-evenly</p>
+              <div class="container6">
+                  <div>1</div>
+                  <div>2</div>
+                  <div>3</div>
+                  <div>4</div>
+                  <div>5</div>
+                  <div>6</div>
+                </div>
+</body>
+
+</html

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation 1</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      ::marker {
+        color: rgb(226, 19, 192);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Transitions</h1>
+    <p>
+      Met CSS-overgangen kunnen we eigenschapswaarden soepel wijzigen gedurende
+      een bepaalde duur.
+    </p>
+    <ul>
+      <li>
+        <h2>transition</h2>
+        <p>
+          Om een overgangseffect te creëren, moeten we twee dingen specificeren:
+          de CSS-eigenschap waaraan we een effect willen toevoegen en de duur
+          van het effect. Als het duurgedeelte niet is opgegeven, heeft de
+          overgang geen effect, omdat de standaardwaarde 0 is.
+        </p>
+        <p>
+          {transition: width 2s;} Het element heeft een overgangseffect
+          gespecificeerd voor de eigenschap width, met een duur van 2
+          seconden.Het overgangseffect begint wanneer de breedte van waarde
+          verandert.
+        </p>
+      </li>
+      <li>
+        <h2>transition-delay</h2>Bepaalt wanneer het overgangseffect begint
+        <p>
+          
+        </p>
+        <li><h2>transition-timing-function</h2>specificeert de snelheidscurve van het overgangseffect.
+
+            Met deze eigenschap kan een overgangseffect de snelheid tijdens de duur veranderen. <br>De eigenschap
+            transition-timing-function kan de volgende waarden hebben:</li>
+        <ul>
+          <li>
+            ease - specificeert een overgangseffect met een langzame start, dan
+            snel en dan langzaam eindigend (dit is standaard)
+          </li>
+          <li>
+            linear - specificeert een overgangseffect met dezelfde snelheid van
+            begin tot eind
+          </li>
+          <li>
+            ease-in - specificeert een overgangseffect met een langzame start
+          </li>
+          <li>
+            ease-out - specificeert een overgangseffect met een langzaam einde
+          </li>
+          <li>
+            ease-in-out - specificeert een overgangseffect met een langzaam
+            begin en einde
+          </li>
+          <li>
+            cubic-bezier(n,n,n,n) - hiermee kunt u uw eigen waarden definiëren
+            in een cubic-bezier-functie
+          </li>
+          <li>step-start - Komt overeen met stappen (1, start)</li>
+          <li>step-end - Komt overeen met stappen (1, end)</li>
+          <li>steps(int,start|end) - Specificeert een stepping-functie, met twee parameters. De eerste parameter specificeert het aantal intervallen in de functie. Het moet een positief geheel getal zijn (groter dan 0). De tweede parameter, die optioneel is, is ofwel de waarde "start" of "end", en specificeert het punt waarop de verandering van waarden plaatsvindt binnen het interval. Als de tweede parameter wordt weggelaten, krijgt deze de waarde "end"</li>
+        </ul>
+      </li>
+      <li><h2>transition-duration</h2> specificeert een vertraging (in seconden) voor het overgangseffect.</li>
+      <li><h2>transition-property</h2>specificeert de naam van de CSS-eigenschap waarvoor het overgangseffect is (het overgangseffect begint wanneer de opgegeven CSS-eigenschap verandert).
+
+        Tip: een overgangseffect kan meestal optreden wanneer een gebruiker de muisaanwijzer over een element beweegt.
+        
+        Opmerking: geef altijd de eigenschap overgangsduur op, anders is de duur 0 en heeft de overgang geen effect </li>
+     
+    </ul>
+  </body>
+</html>

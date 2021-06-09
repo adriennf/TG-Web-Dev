@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions 3.1</title>
+</head>
+<body>
+    <h1>Operators</h1>
+    <h3>a, Wat is het verschill tussen == en ===?</h3>
+    <p>Equal to ==
+        <ul>
+            <li>Loose equality compares two values for equality after converting both values to a common type. After conversions (one or both sides may undergo conversions), the final equality comparison is performed exactly as === performs it.</li>
+            <li>Loose equality is symmetric: A == B always has identical semantics to B == A for any values of A and B (except for the order of applied conversions).</li>
+            <li>undefined and null are loosely equal; that is, undefined == null is true, and null == undefined is true</li>
+        </ul>
+    </p>
+    <p>Strict equality ===<br>
+        Strict equality compares two values for equality. Neither value is implicitly converted to some other value before being compared. If the values have different types, the values are considered unequal. If the values have the same type, are not numbers, and have the same value, they're considered equal. Finally, if both values are numbers, they're considered equal if they're both not NaN and are the same value, or if one is +0 and one is -0.</p>
+    <h3>b, Wat is het verschil tussen > en >=? En tussen < en <=?</h3>
+    <ul>
+        <li>(>) The greater than operator returns true if the left operand is greater than the right operand, and false otherwise.<br>
+            console.log(5 > 3);<br>
+expected output: true<br>
+console.log(3 > 3);<br>
+expected output: false<br>
+        
+        </li>
+        <li>(>=) The greater than or equal operator returns true if the left operand is greater than or equal to the right operand, and false otherwise.
+            <br>console.log('ab' >= 'aa');
+            <br>expected output: true
+            <br>console.log("a" >= "b");
+            <br>false
+        
+        </li>
+        <li>(<) The less than operator returns true if the left operand is less than the right operand, and false otherwise<br>
+            console.log('aa' < 'ab');<br>
+            expected output: true<br>
+            console.log("a" < "a"); <br>   
+            false
+
+        </li>
+        <li>(<=)  The less than or equal operator returns true if the left operand is less than or equal to the right operand, and false otherwise.<br>
+            console.log(5 <= 3);<br>
+            expected output: false<br>
+            
+            console.log(3 <= 3);<br>
+            expected output: true<br>
+        
+        </li>
+    </ul>
+    <p>Soms controleert een conditie meerdere dingen tegelijkertijd. Dit doet met de hulp van Logical Operators:<br>
+            && - EN<br>
+            || - OF<br>
+            ! - NIET<br><br>
+            Soms worden deze in combinatie gebruikt. Gegeven volgende code:
+    </p>
+        <pre>
+        let x = 4;
+        let y = 8;
+
+        if ( ) {
+            console.log("Result!")
+        }
+        </pre>
+    
+    <p>c, Schrijf de If conditie zo, dat je alleen Results ziet als x==4 en y==8</p>
+    <p>d, Schrijf het nu zo dat je alleen Results ziet als x==4 OF y==8</p>
+    <p>e, Zet nu de console.log(“Results”) in een Else { } na de If. Kan je de conditie omdraaien zodat je alsnog Results te zien krijgt?</p>
+    <p>f, Kan je het vorige antwoord ook geven zonder || te gebruiken?</p>
+    <p>g, Log het in je console als de waarde groter dan 5 EN kleiner dan 10 is.</p>
+
+  <script>
+// c, let x = 4;
+//    let y = 8;
+   
+//     if (x == 4 && y == 8) {
+//     console.log('result!')
+//  }
+
+//  d, let x = 4;
+//     let y = 8;
+   
+//     if (x == 4 || y == 8) {
+//      console.log('result')
+//  }
+
+// e, 
+//    let x = 6;
+//    let y = 9;
+
+//      if (x == 4 || y == 8) {
+//      console.log('results');
+//      }
+//     else {
+//     console.log('Results!');
+//     }
+
+//     of 
+
+//    let x = 4;
+//    let y = 8;
+
+//      if (x == 7 || y == 8) {
+//      console.log('results');
+//      }
+//     else if  (x == 7 || y == 8) {
+//     console.log('Results!');
+//     }
+
+// f, 
+//    let x = 6;
+//    let y = 9;
+
+//   if (x == 4, y == 8) {
+//   console.log('result');
+//      }
+//   else {
+//   console.log('Results');
+//     }
+
+//  g-j,  
+// let getal = 42;
+//      if (10 > getal && getal > 5 ) {
+//      console.log('groter dan 5 en kleiner dan 10');
+//     } 
+// else if (getal >= 11 && getal <= 20) {
+//    console.log('11 of groter en 20 en kleiner');
+//     } 
+// else if ( getal == 21 || getal == 23) {
+//             console.log('21 of 23');
+//         } 
+// else if (getal < 35 || (getal > 40 && getal < 45)) {
+//             console.log('kleiner dan 35 of tussen de 40 en 45')
+//         }
+// else {
+//     console.log('wrong number') 
+// }
+
+// k,
+// let getal = 13;
+//         if (getal > 5 && getal < 10) {
+//             console.log('groter dan 5 en kleiner dan 10');
+//         } 
+        
+//         else if (getal >= 11 && getal <= 20) {
+//             console.log('11 of groter en 20 en kleiner');
+//         } 
+        
+//         else if (getal == 21 || getal == 23) {
+//             console.log('21 of 23');
+//         } 
+        
+//         else if ((getal < 35) || ((getal > 40) && (getal < 45))) {
+//             console.log('kleiner dan 35 of tussen de 40 en 45');
+//         }
+
+
+
+   
+        
+
+
+
+
+
+
+
+
+
+
+  </script>  
+</body>
+</html>

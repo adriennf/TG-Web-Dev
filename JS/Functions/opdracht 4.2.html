@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function 4.2</title>
+  </head>
+  <body>
+    <!-- document.getElementsByClassName-->
+
+    <div class="example">First div element with class="example".</div>
+    <button onclick="myFunction()">Try it</button>
+
+    <!--document.getElementsByTagName  -->
+
+    <p>An unordered list:</p>
+    <ul id="choose">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+
+    <button onclick="myFunctio()">Choose</button>
+
+    <!-- document.querySelector -->
+
+    <p id="demo">This is a p element with id="demo".</p>
+
+    <button onclick="myFun()">Try it</button>
+
+    <!-- document.querySelectorAll -->
+
+    <p>
+      Click the button to add a background color to the third p element (index
+      2) in the document.
+    </p>
+
+    <button onclick="myFuncti()">Paint it red!</button>
+
+    <!-- element.innerHTML -->
+
+    <ol id="myList">
+      <li>oefenen</li>
+      <li>oefenen</li>
+      <li>oefenen</li>
+    </ol>
+
+    <p>Click the button get the HTML content of the ul element.</p>
+
+    <button onclick="myFunc()">Test</button>
+
+    <p id="test"></p>
+
+    <!-- element.innerText -->
+
+    <p class="demo">
+      Click the button get the text content of the button element.
+    </p>
+
+    <button onclick="getInnerText()">Get innerText</button>
+
+    <script>
+      // document.getElementsByClassName
+
+      function myFunction() {
+        var x = document.getElementsByClassName("example");
+        x[0].innerHTML = "Hello World!";
+      }
+
+      // document.getElementsByTagName
+
+      function myFunctio() {
+        var x = document.getElementsByTagName("LI");
+        document.getElementById("choose").innerHTML = x[1].innerHTML;
+      }
+
+      // document.querySelector
+
+      function myFun() {
+        document.querySelector("#demo").innerHTML = "Welcome!";
+      }
+
+      // document.querySelectorAll
+
+      function myFuncti() {
+        var x = document.querySelectorAll("p");
+        x[2].style.backgroundColor = "red";
+      }
+
+      // element.innerHTML
+
+      function myFunc() {
+        var x = document.getElementById("myList").innerHTML;
+        document.getElementById("test").innerHTML = x;
+      }
+
+      // element.innerText
+
+      function getInnerText() {
+        alert(document.getElementsByClassName("demo").innerText);
+      }
+    </script>
+  </body>
+</html>

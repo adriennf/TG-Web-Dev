@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function 4.1</title>
+  </head>
+  <body>
+    <h1>Functions</h1>
+
+    <p>a, Maak een button, die de console “Hello World” logt.</p>
+
+    <button onclick="sayHello()">onclick="myFunction()"</button>
+
+    <p id="sayH">b, Type something to change the text in this paragraph.</p>
+
+    <!-- <input onchange="myFunction()" /> -->
+
+    <input type="text" id="myInput" oninput="myFunction()" />
+    <p id="oninput"></p>
+
+    <p>
+      c, This example calls a function which performs a calculation, and returns
+      the result:
+    </p>
+
+    <input type="text" id="user_input" />
+
+    <p>
+      Oninput event is similar to the onchange event. The difference is that the
+      oninput event occurs immediately after the value of an element has
+      changed, while onchange occurs when the element loses focus, after the
+      content has been changed. The other difference is that the onchange event
+      also works on select elements.
+    </p>
+
+    <script>
+      // a, Maak een button, die de console “Hello World” logt.
+
+      function sayHello() {
+        console.log("Hello World!");
+      }
+      document.getElementById("sayH").onclick = sayHello;
+
+      //b, Maak een input element en geef het een bepaald ID. Sla dat ID op in een variabele via document.GetElementByID().
+
+      function myFunction() {
+        document.getElementById("sayH").innerHTML = "Hello World";
+      }
+
+      // c,Maak een functie met een parameter die deze in de console logt. Geef de ID variabele hier aan mee. Wat zie je in de console?
+
+      function sum(parameter) {
+        return parameter * 2;
+      }
+      let result = sum(4);
+
+      console.log(result);
+
+      function sayHi(name) {
+        return "Hello" + " " + name;
+      }
+
+      console.log(sayHi("Carmen"));
+      let message = sayHi("Elly");
+
+      //   function myFunction() {
+      //     var x = document.getElementById("myInput").value;
+      //     document.getElementById("oninput").innerHTML = "You wrote: " + x;
+      //   }
+
+      // function sum() {
+      //   return sum * 2;
+      // }
+      // let result = sum(5);
+      // console.log(result);
+    </script>
+  </body>
+</html>

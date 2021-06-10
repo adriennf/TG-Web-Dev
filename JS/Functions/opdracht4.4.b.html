@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions4.4</title>
+  </head>
+  <body>
+    <input type="text" id="input" onchange="girls()" />
+    <button id="button">Display message</button>
+    <div id="message"></div>
+
+    <script>
+      function displayMessage() {
+        let name = document.getElementById("input").value;
+        switch (name) {
+          case "Elly":
+
+          case "Carmen":
+
+          case "Maher":
+
+          case "Patrick":
+
+          case "Adrienn":
+            document.getElementById("message").innerText =
+              "You are a cool member of the gang";
+            break;
+          default:
+            document.getElementById("message").innerText =
+              "Not so fast, buddy!";
+        }
+      }
+
+      document.getElementById("button").onclick = displayMessage;
+      document.getElementById("input").onchange = displayMessage;
+
+      // c)
+      girls = () =>
+        document.getElementById("message").innerText = displayMessage;
+    </script>
+  </body>
+</html>

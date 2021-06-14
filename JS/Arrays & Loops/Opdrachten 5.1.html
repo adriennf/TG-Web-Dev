@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Loops 5.1</title>
+</head>
+<body>
+    <script>
+// let list = [3, 4, 1, 2, 5, 7, 6, 8, 0, 9, 10]
+// console.log(list)
+// console.log(list[0])
+// let randomItem = list[Math.floor(Math.random()*list.length)];
+// document.body.innerHTML = randomItem;
+
+let fruit = ['Appel', 'Aardbeien', 'Peer', 'Druiven', 'Mango']
+console.log(fruit)
+console.log(fruit[0])
+console.log(fruit[1])
+let random = fruit[Math.floor(Math.random()*fruit.length)];
+document.body.innerHTML = random;
+console.log(random)
+
+//https://stackoverflow.com/questions/43267033/understanding-the-use-of-math-floor-when-randomly-accessing-an-array
+//Math.random() generates random floating point numbers from 0(inclusive) to 1(exclusive).
+//Math.random() * array.length will generate all random numbers from 0 to array.length(exclusive)
+
+// Math.floor returns a whole number, while Math.random() will return a float between 0 and 1.
+// To access an item in an array, like list[0], you need to have a whole number. You cannot access an item in array with list[1.43].
+// That little line of code is going to access a random item in an array by generating a random float from zero to the array's length, and rounding it to its nearest whole number with Math.floor
+
+// console.log(fruit.shift())
+// console.log(fruit.unshift('Aardpeer')) 
+// console.log(fruit)
+
+// fruit.splice(1, 2, 'Peer', 'Aardbeien')
+// console.log(fruit)
+
+
+
+
+    </script>
+</body>
+</html>

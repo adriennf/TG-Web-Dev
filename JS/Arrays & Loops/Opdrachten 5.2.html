@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Loops 5.2</title>
+</head>
+<body>
+    <script>
+const dutchSports = ["Voetbal", "Hockey", "Schaatsen"];
+
+for (let i = 0; i < dutchSports.length; i++) {
+    console.log(dutchSports[i]);
+}
+
+for (i = 0; i <=2; i++) {
+    console.log(dutchSports[i])
+
+}
+// [Log] Voetbal 
+// [Log] Hockey 
+// [Log] Schaatsen 
+
+for (const item in dutchSports) {
+    console.log(dutchSports[item])
+}
+// [Log] Voetbal 
+// [Log] Hockey 
+// [Log] Schaatsen 
+
+for (element of dutchSports) {
+    console.log(element)
+}
+// [Log] Voetbal 
+// [Log] Hockey 
+// [Log] Schaatsen 
+
+for (i = 2; i <= 20; i += 2) {
+  console.log(i); 
+}
+// [Log] 2 
+// [Log] 4 
+// [Log] 6 
+// [Log] 8 
+// [Log] 10 
+// [Log] 12 
+// [Log] 14 
+// [Log] 16 
+// [Log] 18 
+// [Log] 20 
+
+for (i = 0; i <= 2; i++) {
+    for(x = 0; x <= 10; x++);
+    console.log(x)
+}
+// [Log] 11  (x3)
+
+for (i = 0; i <= 2; i++) {
+    for(y = 3; y <= 20; y += 3)
+    console.log(y)
+}
+// [Log] 3 6 9 12 15 18
+// [Log] 3 6 9 12 15 18
+// [Log] 3 6 9 12 15 18
+
+
+for (i = 0; i <= 2; i++) {
+    for(z = 3; z <= 30; z += 3)
+    console.log(z)
+}
+// [Log] 3 6 9 12 15 18 21 24 27 30 
+// [Log] 3 6 9 12 15 18 21 24 27 30 
+// [Log] 3 6 9 12 15 18 21 24 27 30 
+
+let array = [0, 1]
+
+for (i = 0;  i <= 50; i++) {
+    fibNummer = array[i] + array[i + 1]
+    array.push(fibNummer) 
+}
+console.log(fibNummer) //[Log] 32951280099 
+console.log(array) //[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, …] (53)
+
+let array2 = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6]
+
+for (item in array2) {
+    for (i=0; i<=array2.length; i++) {
+        if (array2[i] > array2[i+1]) {
+            array2.splice(i, 0, array2[i + 1])
+            array2.splice(i + 2, 1)
+            console.log(array2)
+        }
+    }
+}
+// [Log] [2, 5, 7, 10, 4, 9, 3, 1, 8, 6] (10)
+// [Log] [2, 5, 7, 4, 10, 9, 3, 1, 8, 6] (10)
+// [Log] [2, 5, 7, 4, 9, 10, 3, 1, 8, 6] (10)
+// [Log] [2, 5, 7, 4, 9, 3, 10, 1, 8, 6] (10)
+// [Log] [2, 5, 7, 4, 9, 3, 1, 10, 8, 6] (10)
+// [Log] [2, 5, 7, 4, 9, 3, 1, 8, 10, 6] (10)
+// [Log] [2, 5, 7, 4, 9, 3, 1, 8, 6, 10] (10)
+// [Log] [2, 5, 4, 7, 9, 3, 1, 8, 6, 10] (10)
+// [Log] [2, 5, 4, 7, 3, 9, 1, 8, 6, 10] (10)
+// [Log] [2, 5, 4, 7, 3, 1, 9, 8, 6, 10] (10)
+// [Log] [2, 5, 4, 7, 3, 1, 8, 9, 6, 10] (10)
+// [Log] [2, 5, 4, 7, 3, 1, 8, 6, 9, 10] (10)
+// [Log] [2, 4, 5, 7, 3, 1, 8, 6, 9, 10] (10)
+// [Log] [2, 4, 5, 3, 7, 1, 8, 6, 9, 10] (10)
+// [Log] [2, 4, 5, 3, 1, 7, 8, 6, 9, 10] (10)
+// [Log] [2, 4, 5, 3, 1, 7, 6, 8, 9, 10] (10)
+// [Log] [2, 4, 3, 5, 1, 7, 6, 8, 9, 10] (10)
+// [Log] [2, 4, 3, 1, 5, 7, 6, 8, 9, 10] (10)
+// [Log] [2, 4, 3, 1, 5, 6, 7, 8, 9, 10] (10)
+// [Log] [2, 3, 4, 1, 5, 6, 7, 8, 9, 10] (10)
+// [Log] [2, 3, 1, 4, 5, 6, 7, 8, 9, 10] (10)
+// [Log] [2, 1, 3, 4, 5, 6, 7, 8, 9, 10] (10)
+// [Log] [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] (10)
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

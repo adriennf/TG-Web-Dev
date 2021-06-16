@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays & Loops 5.4</title>
+  </head>
+  <body>
+    <h4>Array.from(), Arrow function</h4>
+    <blockquote>
+      Array.from(arrayLike, (element) => { ... } ) 
+      Array.from(arrayLike, (element, index) => { ... } ) 
+      Array.from(arrayLike, (element, index, array) => { ... } )
+    </blockquote>
+    <p>arrayLike- an array-like or iterable object to convert to an array. (Array-Like Objects kunnen geen Array methods gebruiken)</p>
+    <h4>arr.filter()</h4>
+    <p>Syntax: array.filter(callback(element, index, arr), thisValue)</p>
+    <p>
+      The arr.filter() method is used to create a new array from a given array
+      consisting of only those elements from the given array which satisfy a
+      condition set by the argument method.
+    </p>
+    <h4>Array find()</h4>
+    <p>Syntax: array.find(function(currentValue, index, arr),thisValue)</p>
+    <p>
+      The arr.find() method is used to get the value of the first element in the
+      array that satisfies the provided condition. It checks all the elements of
+      the array and whichever the first element satisfies the condition is going
+      to print.
+    </p>
+    <h4>Array every()</h4>
+    <p>Syntax: arr.every(callback(element[, index[, array]])[, thisArg])</p>
+    <p>
+      The arr.every() method checks whether all the elements of the array
+      satisfy the given condition or not that is provided by a method passed to
+      it as the argument.
+    </p>
+    <h4>Array.some()</h4>
+    <p>Syntax: array.some(callback[, thisObject])</p>
+    <h4>Array includes()</h4>
+    <p>Syntax: array.includes(searchElement, start)</p>
+    <p>
+      The array.includes() method is used to know either a particular element is
+      present in the array or not and accordingly, it returns true or false i.e,
+      if the element is present, then it returns true otherwise false.
+    </p>
+
+    <div>Some Text</div>
+    <div>Some Text</div>
+
+    <script>
+      let arrayLike = document.querySelectorAll("div");
+      console.log(arrayLike);
+
+      // [Logt] NodeList (2)
+      // 0 <div>Some Text </div>
+      // 1 <div>Some Text </div>
+
+      console.log(Array.from(arrayLike));
+
+      // [Logt] Array (2)
+      // 0 <div>Some Text</div>
+      // 1 <div>Some Text</div>
+
+      console.log(Array.from("foo"));
+      // expected output: Array ["f", "o", "o"]
+
+      console.log(Array.from([1, 2, 3], (x) => x + x));
+      // expected output: Array [2, 4, 6]
+
+      // JavaScript to illustrate findIndex() method
+      function canVote(age) {
+        return age >= 18;
+      }
+
+      // filter()
+
+      var array = [-1, -4, 5, 6, 8, 9, -12, -5, 4, -1];
+      var new_array = array.filter((element) => element >= 0);
+      document.write("<p>Output\n</p>", "<p>", new_array, "</p>");
+
+      function func() {
+        var filtered = [24, 33, 16, 40].filter(canVote);
+        console.log(filtered);
+      }
+      func();
+      //[24, 33, 40] (3)
+
+      function isEven(value) {
+        return value % 2 == 0;
+      }
+      var filtered = [11, 98, 31, 23, 944].filter(isEven);
+      console.log(filtered);
+      //   [98, 944] (2)
+
+      // find()
+
+      // input array contain some elements.
+      var array = [-10, -0.2, 0.3, -40, -50];
+
+      // method (return element > 0).
+      var found = array.find(function (element) {
+        return element > 0;
+      });
+
+      // Printing desired values.
+      console.log(found);
+      //   document.write(found);
+      //    0.3
+
+      //   every()
+
+      function isEven(element, index, array) {
+        return element % 2 == 0;
+      }
+
+      function func() {
+        var arr = [56, 92, 18, 88, 12];
+
+        // Check for even number
+        var value = arr.every(isEven);
+        // document.write(value);
+        console.log(value);
+      }
+      func();
+      //   true
+
+      // some()
+
+      // check for positive number
+      function ispositive(element, index, array) {
+        return element > 0;
+      }
+
+      var arr = [11, 89, 23, 7, 98];
+
+      // check for positive number
+      var value = arr.some(ispositive);
+      console.log(value);
+      //   true
+
+      // check for even number
+      function iseven(element, index, array) {
+        return element % 2 == 0;
+      }
+
+      var arr = [11, 89, 23, 7, 91];
+
+      // check for positive number
+      var value = arr.some(iseven);
+      console.log(value);
+      //false
+
+      //   includes()
+
+      // Taking input as an array A
+      // having some elements.
+      var A = [1, 2, 3, 4, 5];
+
+      // includes() method is called to
+      // test whether the searching element
+      // is present in given array or not.
+      a = A.includes(2);
+
+      // Printing result of includes().
+      // document.write(a);
+      console.log(a);
+
+      // Taking input as an array A
+      // having some elements.
+      var name = ["gfg", "cse", "geeks", "portal"];
+
+      // includes() method is called to
+      // test whether the searching element
+      // is present in given array or not.
+      check = name.includes("cat");
+
+      // Printing result of includes()
+      // document.write(check);
+      console.log(check);
+      // false
+    </script>
+  </body>
+</html>

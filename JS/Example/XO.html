@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+        }
+​
+        .game {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+​
+        .field {
+            width: 306px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            font-size: 80px;
+            text-align: center;
+        }
+​
+        .square {
+            width: 100px;
+            height: 100px;
+            border: thin solid black;
+        }
+​
+        .victory {
+            background-color: lightgreen;
+        }
+​
+    </style>
+</head>
+​
+<body>
+    <div class="game">
+        <div class="field">
+            <div class="square" id="square1"></div>
+            <div class="square" id="square2"></div>
+            <div class="square" id="square3"></div>
+            <div class="square" id="square4"></div>
+            <div class="square" id="square5"></div>
+            <div class="square" id="square6"></div>
+            <div class="square" id="square7"></div>
+            <div class="square" id="square8"></div>
+            <div class="square" id="square9"></div>
+        </div>
+        <div class="info">Spel nog niet begonnen.</div>
+        <div class="setup">
+            <input type="text" id="input1" placeholder="Player One">
+            <input type="text" id="input2" placeholder="Player Two">
+            <button onclick=start()>Start</button>
+            <button onclick=clearBoard()>Reset</button>
+        </div>
+    </div>
+​
+​
+    <script>
+        const square1 = document.getElementById('square1')
+        const square2 = document.getElementById('square2')
+        const square3 = document.getElementById('square3')
+        const square4 = document.getElementById('square4')
+        const square5 = document.getElementById('square5')
+        const square6 = document.getElementById('square6')
+        const square7 = document.getElementById('square7')
+        const square8 = document.getElementById('square8')
+        const square9 = document.getElementById('square9')
+        const info = document.querySelector('.info')
+        const field = document.querySelectorAll('.square')
+        let playerOneTurn = true
+        let playerOne
+        let playerTwo
+​
+​
+​
+        function input(event) {
+            if (!event.target.innerText) {
+                if (playerOneTurn) {
+                    event.target.innerText = 'X'
+                    info.innerText = `${playerTwo} is aan zet!`
+                }
+                if (!playerOneTurn) {
+                    event.target.innerText = 'O'
+                    info.innerText = `${playerOne} is aan zet!`
+                }
+                playerOneTurn = !playerOneTurn
+            }
+            checkVictory(event)
+        }
+​
+        function start() {
+            playerOne = document.getElementById('input1').value
+            playerTwo = document.getElementById('input2').value
+            playerOneTurn = true;
+            info.innerText = `${playerOne} is aan zet!`
+​
+            field.forEach(element => {
+                element.onclick = input;
+            });
+        }
+​
+        function reset() {
+            field.forEach(element => {
+                element.onclick = null;
+            });
+        }
+​
+        function clearBoard() {
+            reset()
+            field.forEach(element => {
+                element.innerText = '';
+                element.classList.remove('victory')
+            });
+        }
+​
+        function checkVictory(event) {
+            let victory;
+            let winner;
+​
+            winner = checkHorizontal(event)
+            if (winner) {
+                reset()
+                if (!playerOneTurn) {
+                    return info.innerText = `${playerOne} heeft gewonnen!`
+                }
+                if (playerOneTurn) {
+                    return info.innerText = `${playerTwo} heeft gewonnen!`
+                }
+            }
+​
+            winner = checkVertical(event)
+            if (winner) {
+                reset()
+                if (!playerOneTurn) {
+                    return info.innerText = `${playerOne} heeft gewonnen!`
+                }
+                if (playerOneTurn) {
+                    return info.innerText = `${playerTwo} heeft gewonnen!`
+                }
+            }
+​
+            winner = checkDiagonal(event)
+            if (winner) {
+                reset()
+                if (!playerOneTurn) {
+                    return info.innerText = `${playerOne} heeft gewonnen!`
+                }
+                if (playerOneTurn) {
+                    return info.innerText = `${playerTwo} heeft gewonnen!`
+                }
+            }
+        }
+​
+        function checkHorizontal(event) {
+            const row1 = [square1, square2, square3]
+            victory = row1.every(item => item.innerText === event.target.innerText)
+            if (victory) {
+                row1.forEach(element => {
+                    element.classList.add('victory')
+                });
+                return victory;
+            }
+​
+            const row2 = [square4, square5, square6]
+            victory = row2.every(item => item.innerText === event.target.innerText)
+            if (victory) {
+                row2.forEach(element => {
+                    element.classList.add('victory')
+                });
+                return victory;
+            }
+​
+            const row3 = [square7, square8, square9]
+            victory = row3.every(item => item.innerText === event.target.innerText)
+            if (victory) {
+                row3.forEach(element => {
+                    element.classList.add('victory')
+                });
+                return victory;
+            }
+        }
+​
+        function checkVertical(event) {
+            const col1 = [square1, square4, square7]
+            victory = col1.every(item => item.innerText === event.target.innerText)
+            if (victory) {
+                col1.forEach(element => {
+                    element.classList.add('victory')
+                });
+                return victory;
+            }
+​
+            const col2 = [square2, square5, square8]
+            victory = col2.every(item => item.innerText === event.target.innerText)
+            if (victory) {
+                col2.forEach(element => {
+                    element.classList.add('victory')
+                });
+                return victory;
+            }
+​
+            const col3 = [square3, square6, square9]
+            victory = col3.every(item => item.innerText === event.target.innerText)
+            if (victory) {
+                col3.forEach(element => {
+                    element.classList.add('victory')
+                });
+                return victory;
+            }
+​
+        }
+​
+        function checkDiagonal(event) {
+            const dia1 = [square1, square5, square9]
+            victory = dia1.every(item => item.innerText === event.target.innerText)
+            if (victory) {
+                dia1.forEach(element => {
+                    element.classList.add('victory')
+                });
+                return victory;
+            }
+​
+            const dia2 = [square3, square5, square7]
+            victory = dia2.every(item => item.innerText === event.target.innerText)
+            if (victory) {
+                dia2.forEach(element => {
+                    element.classList.add('victory')
+                });
+                return victory;
+            }
+        }
+​
+    </script>
+</body>
+​
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

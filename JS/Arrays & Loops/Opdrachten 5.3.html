@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Loops 5.3</title>
+</head>
+<body>
+<!-- Gebruik Array methods om het volgende te doen. Elke vraag gebruikt een andere method:
+
+
+Maak een nieuw array ballSports, met de balsporten uit dutchSports
+Verwijder die items uit dutchSports.
+Sorteer het dutchSports array.
+Log elk item in de console.
+Maak een nieuw array sportsLength, met daarin de lengte van elk item in het dutchSports array -->
+
+    <script>
+        const dutchSports = ["Voetbal", "Hockey", "Schaatsen"];
+        dutchSports.push("Zeilen", "Zwemmen")
+        dutchSports.unshift("Volleybal")
+        console.log(dutchSports)
+
+        let ballSports = dutchSports.slice(0,2); {
+            console.log(ballSports)
+        }
+
+        let ballSports2 = dutchSports.splice(3, 5); {
+            console.log(ballSports2)
+        }
+
+        let ballSports3 = dutchSports.sort(); {
+            console.log(ballSports3)
+        }
+        
+        dutchSports.forEach(element => console.log(element));
+
+        console.log(dutchSports.length)
+
+
+        
+
+
+
+
+
+        </script>
+</body>
+</html>
+

@@ -16,11 +16,17 @@
 
 let fruit = ['Appel', 'Aardbeien', 'Peer', 'Druiven', 'Mango']
 console.log(fruit)
-console.log(fruit[0])
-console.log(fruit[1])
+
+console.log(fruit[0], fruit[1])
+
 let random = fruit[Math.floor(Math.random()*fruit.length)];
 document.body.innerHTML = random;
 console.log(random)
+
+let random2 = fruit[Math.floor(Math.random()*3)];
+console.log(random2)
+random2 = random2 % fruit.length
+console.log(fruit[random2])
 
 //https://stackoverflow.com/questions/43267033/understanding-the-use-of-math-floor-when-randomly-accessing-an-array
 //Math.random() generates random floating point numbers from 0(inclusive) to 1(exclusive).

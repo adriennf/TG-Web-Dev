@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects 6.2</title>
+  </head>
+  <body>
+    <script>
+      // ----------Club Cats-------------
+
+      function ClubCats(nameOwner, breed, type, clientidentifier) {
+        (this.nameOwner = nameOwner),
+          (this.breed = breed),
+          (this.type = type),
+          (this.clientidentifier = clientidentifier);
+      }
+
+      let newCC = new ClubCats(
+        "Miss Catty",
+        "British Shorthair Cat",
+        "Lid",
+        "233"
+      );
+
+      function contact(name, address, email) {
+        (this.name = name), (this.address = address), (this.email = email);
+      }
+
+      newCC.contact = new contact(
+        "Miss Catty",
+        "Amsterdam",
+        "catty.cat@hotmail.com"
+      );
+      console.log(newCC);
+
+      let newCC2 = new ClubCats(
+        "Ms Mickey",
+        "British Shorthair Cat",
+        "Visitor",
+        "133"
+      );
+      let newCC3 = new ClubCats(
+        "Ms Katy",
+        "British Shorthair Cat",
+        "Lid",
+        "199"
+      );
+      let newCC4 = new ClubCats(
+        "Mr Snow",
+        "British Shorthair Cat",
+        "Visitor",
+        "203"
+      );
+      let newCC5 = new ClubCats(
+        "Miss Perry",
+        "British Shorthair Cat",
+        "Lid",
+        "33"
+      );
+      newCC2.contact = new contact(
+        "Ms Mickey",
+        "Amstelveen",
+        "mickey@hotmail.com"
+      );
+      newCC3.contact = new contact(
+        "Ms Katy",
+        "Amsterdam",
+        "cattykaty@hotmail.com"
+      );
+      newCC4.contact = new contact("Mr Snow", "Amsterdam", "snow@hotmail.com");
+      newCC5.contact = new contact(
+        "Miss Perry",
+        "Amsterdam",
+        "perry.pet@hotmail.com"
+      );
+
+      let clubsList = [newCC, newCC2, newCC3, newCC4, newCC5];
+
+      clubsList.forEach((ClubCats) => console.log(ClubCats.contact));
+
+      // contact {name: "Miss Catty", address: "Amsterdam", email: "catty.cat@hotmail.com"}
+
+      // console.log(ClubCats.contact.name)
+      // console.log(ClubCats.contact.email)
+
+      function clubsInfo() {
+        for (let i = 0; i < clubsList.length; i++) {
+          console.log(
+            "Contact: " +
+              clubsList[i].contact.name +
+              ", " +
+              clubsList[i].contact.email +
+              ", " +
+              clubsList[i].type
+          );
+        }
+      }
+
+      clubsInfo(clubsList);
+    </script>
+  </body>
+</html>

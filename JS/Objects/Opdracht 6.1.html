@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects6.1</title>
+  </head>
+  <body>
+    <p>JSON, JavaScript Object Notation</p>
+    <script>
+      // ----------Object Constructor-----------
+
+      // let objectConstructed = new Object();
+      // objectConstructed.breed = "British Shorthair";
+      // objectConstructed.name = "Jens";
+      // objectConstructed.personality = "loyal";
+      // objectConstructed.city = "Amsterdam";
+
+      // console.log(objectConstructed);
+      // {breed: "British Shorthair", name: "Jens", personality: "loyal", city: "Amsterdam"}
+
+      //  ---------Literal Constructor------------
+
+      let literallyConstructed = {
+        breed: "Savannah Cat",
+        name: "Poppy",
+        personality: "playful",
+        city: "A'dam",
+      };
+      console.log(literallyConstructed);
+      //   {breed: "Savannah Cat", name: "Poppy", personality: "playful", city: "A'dam"}
+
+      // -------Function Constructor--------------
+
+      function Pet(breed, name, city) {
+        this.breed = breed;
+        this.name = name;
+        this.city = city;
+      }
+      let functionConstructed = new Pet(
+        "British Shorthair Cat",
+        "Cat",
+        "Amsterdam"
+      );
+      console.log(functionConstructed);
+      // Pet
+      // breed: "British Shorthair Cat"
+      // city: "Amsterdam"
+      // name: "Cat"
+      // Pet prototype
+      // constructor: function(breed, name, city)
+      // arguments: null
+      // caller: null
+      // length: 3
+      // name: "Pet"
+      // prototype: Pet {}
+      // Function prototype
+
+      // --------Singleton Constructor-----------
+
+      // let singletonConstructed = new function() {
+      //  this.breed = "Egyptian Mau Cat",
+      //    this.age = "1 month",
+      //    this.breed2 = "Japanese Bobtail Cat",
+      //    this.age = "1 month"
+      // }
+      // console.log(singletonConstructed);
+      //   {breed: "Egyptian Mau Cat", age: "1 month", breed2: "Japanese Bobtail Cat"}
+
+      // -------Class-based Constructor---------
+
+      class CatsToo {
+        constructor(breed, name, age) {
+          this.breed = "Bengal Cat";
+          this.name = "Catty";
+          this.age = "1 month";
+        }
+        whislist() {
+          console.log("Put it on my wishlist");
+        }
+      }
+      let classConstructed = new CatsToo("Bengal Cat", "Catty", "1 month");
+      console.log(classConstructed);
+
+      //   -----------Object.create()-----------
+
+      let cat1 = Object.create(objectConstructed);
+      cat1.name = "Katty";
+      cat1.breed = "Bengal Cat";
+      cat1.personality = "adventurous";
+      console.log(cat1);
+      //   {name: "Katty", breed: "Bengal Cat", personality: "adventurous", city: "Amsterdam"}
+
+      let cat2 = Object.create(literallyConstructed);
+      cat2.name = "Betty";
+      cat2.breed = "Bengal Cat";
+      cat2.personality = "adventurous";
+      console.log(cat2);
+      //   {name: "Betty", breed: "Bengal Cat", personality: "adventurous", city: "A'dam"}
+
+      let cat3 = Object.create(functionConstructed);
+      cat3.name = "Matty";
+      cat3.breed = "Bengal Cat";
+      cat3.personality = "adventurous";
+      console.log(cat3);
+      // Pet {name: "Matty", breed: "Bengal Cat", personality: "adventurous", city: "Amsterdam"}
+      // Pet
+      // breed: "Bengal Cat"
+      // name: "Matty"
+      // personality: "adventurous"
+      // Pet prototype
+      // breed: "British Shorthair Cat"
+      // city: "Amsterdam"
+      // name: "Cat"
+      // Pet prototype
+
+      let cat4 = Object.create(singletonConstructed);
+      cat4.name = "Patty";
+      cat4.breed = "Bengal Cat";
+      cat4.personality = "adventurous";
+      console.log(cat4);
+
+      let cat5 = Object.create(classConstructed);
+      cat5.name = "Jetty";
+      cat5.breed = "Bengal Cat";
+      cat5.personality = "adventurous";
+      console.log(cat5);
+
+      //   --------List of age-----------
+
+      yourClients = [
+        { name: "Anna", age: 33 },
+        { name: "Alma", age: 35 },
+        { name: "Bea", age: 30 },
+        { name: "Cecile", age: 39 },
+        { name: "Dia", age: 43 },
+        { name: "Ester", age: 27 },
+        { name: "Ester", age: 39 },
+        { name: "May", age: 28 },
+        { name: "Ria", age: 33 },
+        { name: "Thea", age: 88 },
+      ];
+
+      yourClients.sort((a, b) => (a.age > b.age ? 1 : -1));
+
+      console.log(yourClients);
+
+      //   [{name: "Ester", age: 27}, {name: "May", age: 28},
+      //   {name: "Bea", age: 30}, {name: "Ria", age: 33},
+      //   {name: "Anna", age: 33}, {name: "Alma", age: 35},
+      //   {name: "Ester", age: 39}, {name: "Cecile", age: 39},
+      //   {name: "Dia", age: 43}, {name: "Thea", age: 88}] (10)
+    </script>
+  </body>
+</html>

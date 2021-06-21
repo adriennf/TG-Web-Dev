@@ -9,8 +9,8 @@
   <body>
     <h4>Array.from(), Arrow function</h4>
     <blockquote>
-      Array.from(arrayLike, (element) => { ... } ) 
-      Array.from(arrayLike, (element, index) => { ... } ) 
+      Array.from(arrayLike, (element) => { ... } ) <br>
+      Array.from(arrayLike, (element, index) => { ... } ) <br>
       Array.from(arrayLike, (element, index, array) => { ... } )
     </blockquote>
     <p>arrayLike- an array-like or iterable object to convert to an array. (Array-Like Objects kunnen geen Array methods gebruiken)</p>
@@ -63,8 +63,8 @@
       // 0 <div>Some Text</div>
       // 1 <div>Some Text</div>
 
-      console.log(Array.from("foo"));
-      // expected output: Array ["f", "o", "o"]
+      console.log(Array.from("TechGrounds"));
+      // expected output: Array ["T", "e", "c", "h", "G", "r", "o", "u", "n", "d", "s"] (11)
 
       console.log(Array.from([1, 2, 3], (x) => x + x));
       // expected output: Array [2, 4, 6]
@@ -73,7 +73,7 @@
 
       var array = [-1, -4, 5, 6, 8, 9, -12, -5, 4, -1];
       var new_array = array.filter((element) => element >= 0);
-      document.write("<p>Output\n</p>", "<p>", new_array, "</p>");
+      document.write("<p>Output</p>", "<p>", new_array, "</p>");
 
       function func() {
         var filtered = [24, 33, 16, 40].filter(canVote);
@@ -82,13 +82,7 @@
       func();
       //[24, 33, 40] (3)
 
-      function isEven(value) {
-        return value % 2 == 0;
-      }
-      var filtered = [11, 98, 31, 23, 944].filter(isEven);
-      console.log(filtered);
-      //   [98, 944] (2)
-
+      
       // find()
 
       // input array contain some elements.

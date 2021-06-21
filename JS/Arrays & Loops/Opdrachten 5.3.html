@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arrays & Loops 5.3</title>
-</head>
-<body>
-<!-- Gebruik Array methods om het volgende te doen. Elke vraag gebruikt een andere method:
-
-
+  </head>
+  <body>
+    <!-- Gebruik Array methods om het volgende te doen. Elke vraag gebruikt een andere method:
+Voeg Zeilen en Zwemmen toe aan het einde van het array
+Voeg Volleybal toe aan het begin van het array
 Maak een nieuw array ballSports, met de balsporten uit dutchSports
 Verwijder die items uit dutchSports.
 Sorteer het dutchSports array.
 Log elk item in de console.
-Maak een nieuw array sportsLength, met daarin de lengte van elk item in het dutchSports array -->
+Maak een nieuw array sportsLength, met daarin de lengte van elk item in het dutchSports array.
+-->
 
     <script>
-        const dutchSports = ["Voetbal", "Hockey", "Schaatsen"];
-        dutchSports.push("Zeilen", "Zwemmen")
-        dutchSports.unshift("Volleybal")
-        console.log(dutchSports)
+      const dutchSports = ["Voetbal", "Hockey", "Schaatsen"];
+      dutchSports.push("Zeilen", "Zwemmen");
+      //   console.log(dutchSports);
 
-        let ballSports = dutchSports.slice(0,2); {
-            console.log(ballSports)
-        }
+      dutchSports.unshift("Volleybal");
+      console.log(dutchSports);
+      //   ["Volleybal", "Voetbal", "Hockey", "Schaatsen", "Zeilen", "Zwemmen"] (6)
 
-        let ballSports2 = dutchSports.splice(3, 5); {
-            console.log(ballSports2)
-        }
+      //   let ballSports = dutchSports.slice(0, 2);
+      //   {
+      //     console.log(ballSports);
+      //   }
+      // //   ["Volleybal", "Voetbal"] (2)
 
-        let ballSports3 = dutchSports.sort(); {
-            console.log(ballSports3)
-        }
-        
-        dutchSports.forEach(element => console.log(element));
+      //   let ballSports2 = dutchSports.splice(2, 4);
+      //   {
+      //     console.log(ballSports2);
+      //   }
+      // // ["Hockey", "Schaatsen", "Zeilen", "Zwemmen"] (4)
 
-        console.log(dutchSports.length)
+      let ballSports3 = dutchSports.sort();
+      {
+        console.log(ballSports3);
+      }
+      //   ["Hockey", "Schaatsen", "Voetbal", "Volleybal", "Zeilen", "Zwemmen"] (6)
+
+      dutchSports.forEach((element) => console.log(element));
+
+      // [Log] Hockey (Opdrachten 5.3.html)
+      // [Log] Schaatsen (Opdrachten 5.3.html)
+      // [Log] Voetbal (Opdrachten 5.3.html)
+      // [Log] Volleybal (Opdrachten 5.3.html)
+      // [Log] Zeilen (Opdrachten 5.3.html)
+      // [Log] Zwemmen (Opdrachten 5.3.html)
+
+      console.log(dutchSports.length);
+
+      // [Log] 6 (Opdrachten 5.3.html)
+
+      console.log(dutchSports.map(element => element.length));
+      
+    //   [6, 9, 7, 9, 6, 7] (6)
 
 
-        
-
-
-
-
-
-        </script>
-</body>
+    </script>
+  </body>
 </html>
-

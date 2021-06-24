@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  display: flex;
+  margin: auto;
+  height: 501px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+
+.mySlides {
+  /* display: none; */
+  position: absolute;
+  /* transform: translate(-50%); */
+  /* animation-name: example;
+  animation-duration: 4s; */
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  justify-content: center;
+  height: 501px;
+}
+
+/* buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 0%;
+  color: rgba(46, 45, 45, 0.87);
+  background-color: rgba(0, 0, 0, 0.171);
+  font-weight: 100;
+  font-size: 35px;
+  border: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 0 10px 0 0;
+}
+
+.prev {
+  border-radius: 10px 0 0 0;
+}
+
+button {
+  width: 35px;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Faint animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 2;
+  }
+}
+/* @keyframes example {
+  0%   {left:0px}
+  100%  {left:200px}
+
+} */

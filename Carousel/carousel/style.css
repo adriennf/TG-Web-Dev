@@ -25,6 +25,7 @@ img {
   object-fit: cover;
   justify-content: center;
   height: 501px;
+  /* border-radius: 10px 10px 0 0; */
 }
 
 /* buttons */

@@ -45,11 +45,12 @@ h1 {
 }
 
 .buttons {
+  width: 50%;
   position: absolute;
   bottom: 4em;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   color: black;
   font-weight: bold;
   cursor: pointer;

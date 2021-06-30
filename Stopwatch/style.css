@@ -56,7 +56,7 @@ h1 {
 }
 
 #start,
-#pause,
+#reset,
 #stop {
   height: 3rem;
   width: 5rem;
@@ -71,7 +71,7 @@ h1 {
   background-color: greenyellow;
 }
 
-.pause {
+.reset {
   background-color: gold;
 }
 

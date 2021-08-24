@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <h1>Why learn CSS Grid layout?</h1>
+    <!-- https://caniuse.com/#feat=css-grid -->
+    <ul class="list">
+        <li>EASIER TO CREATE TWO DIMENSIONAL LAYOUTS</li>
+        <li>SIMPLER MARKUP</li>
+        <li>FLEXIBLE</li>
+        <li>SKIP FRAMEWORKS</li>
+        <li>BROWSER SUPPORT</li>
+        <li></li>
+    </ul> 
+
+    <!--  -->
+    <h1 class="title">Container</h1>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    
+    <!--  -->
+    <h1 class="title">display: grid</h1>
+    <div class="container2">
+        <div>1</div>
+        <div>grid-template-columns 3x</div>
+        <div>3</div>
+        <div>4</div>
+        <div>grid-template-rows 2x</div>
+        <div>6</div>
+    </div>
+
+    <!--  -->
+    <h1 class="title">display: grid</h1>
+    <div class="container3">
+        <div>grid-template-columns 2x</div>
+        <div>2</div>
+        <div>grid-template-rows 3x</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+    <!--  -->
+    <h1 class="title">Fraction units</h1>
+    <div class="container4">
+        <div>1fr</div>
+        <div>columns: repeat(3, 1fr)</div>
+        <div>3</div>
+        <div>4</div>
+        <div>rows: repeat(3, 3em)</div>
+        <div>6</div>
+        <div>7</div>
+        <div>grid-template: repeat(3, 3em) / repeat(3, 1fr)</div>
+        <div>9</div>
+    </div>
+
+
+    <!--  -->
+       <h1 class="title">CSS GRID</h1>
+       <div class="wrapper">
+           <div class="header">HEADER</div>
+           <div class="menu">MENU</div>
+           <div class="content">CONTENT</div>
+           <div class="footer">FOOTER</div>
+       </div>
+   
+      
+
+          
+ 
+          
+    
+</body>
+</html>

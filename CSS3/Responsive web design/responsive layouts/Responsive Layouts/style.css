@@ -1,0 +1,119 @@
+
+/* index
+ 1 | Using percentages & avoiding heights
+ 2 | Relative units
+ 3 | Enter max-width
+
+ */
+
+
+* {
+box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Using percentages & avoiding heights */
+
+.parent {
+    background-color: red;
+    padding: 50px;
+    /* width: 900px; */
+    /* once we set width on an element, we need media queries. 
+    Instead, do not set width ;) 
+    Default is responsive, do not take it away.
+    At large screens, things can get too big -> max-width! */
+    width: 80%;
+    /* 80% of it's parent */
+
+    /* overflow: hidden; */
+
+    margin: 0 auto;
+}
+
+.child {
+    background-color: orange;
+    /* normally do not include a height, it's just to get started */
+    height: 250px;
+    /* width: 750px; */
+    /* has bigger width than it's parent? will overflow at default :( */
+    width: 50%; /* do not set height ->overflow */
+    /* 50% of it's parent */
+    
+    /* overflow: hidden; */
+    
+}
+
+.container {
+    background: steelblue;
+    color: rgb(255, 255, 255);
+
+    width: 80%;
+
+    /* 3 | Enter max-width */
+    max-width: 750px; 
+    margin: 0 auto;
+
+    /* height: 300px; */
+    /* turn off height, it's responsive at default*/
+    padding: 5em;  /* 16 * 5 = 80px */
+}
+
+/* Relative units */
+/* you shouldn't set font-sizes using em ->crazy companding cascade  */
+
+h2 {
+    font-size: 2.25em;
+}
+
+/* p,
+ul {
+    font-size: 1.125em;
+} */
+
+.cta {
+    background: chocolate;
+    padding: 1em;
+    /* em references the font-size of this element, not the parent! */
+    color: black;
+    /* font-size: 1.2em; */
+    font-size: 1.25rem;
+   
+}
+
+.cta_title {
+    margin: 0 0 0.5em;
+     /* em references the font-size of this element, not the parent! */
+     /* if u want margin consistent, can set it rem */
+    color: cornsilk;
+    /* font-size: 2em; */ 
+    font-size: 2rem;
+     /* rem- padding or margin grow/shrink with it */
+}
+
+.cta_btn {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+     /* em references the font-size of this element, not the parent! */
+    background:rgb(255, 255, 255);
+    transition: 250ms;
+    /* font-size: 1.25em; */
+    /* companding! */
+    font-size: 1.25rem;
+}
+
+.cta_btn:hover {
+    background: rgba(0, 0, 0, 0.082);
+    color:white;
+}
+
+.cta_body {
+    /* font-size: 1.25em; */
+    /* companding! */
+    font-size: 1.25rem;
+}
+

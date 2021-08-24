@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+      }
+
+/* Button page */
+
+      .center {
+        margin: 0;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+
+      #myBtn {
+        padding: 3.5rem 0.5rem;
+        background: #ff0000;
+        border-radius: 50%;
+        color: aliceblue;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+/* Background */
+
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        /* background-color: rgba(0, 132, 255, 0.4); Black w/ opacity */
+        -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+        -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+        transition: opacity 0.3s 0s, visibility 0s 0.3s;
+      }
+
+/* Modal Content */
+
+      .modal-content {
+        background-color: #000000;
+        margin: auto;
+        padding: 10px 0;
+        border: 1px solid #888;
+        width: 60vw;
+        filter: drop-shadow(0 0 0.75rem rgba(223, 223, 18, 0.612));
+      }
+
+      img {
+        width: 100%;
+      }
+
+/* The Close Button */
+
+      .close {
+        color: #ff0000;
+        float: right;
+        font-size: 60px;
+        font-weight: bold;
+        padding-right: 10px;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: rgba(250, 4, 4, 0.495);
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+
+<!-- Trigger/Open The Modal -->
+
+    <div class="center">
+      <button id="myBtn">Captain Carter</button>
+    </div>
+
+<!-- The Modal -->
+
+    <div id="mymodal" class="modal">
+
+<!-- Modal content -->
+
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img
+          src="https://images.immediate.co.uk/production/volatile/sites/3/2020/01/peggy_carter_marvel_what_if_disney_plus-a4c272c.jpg?webp=true&quality=90&resize=408%2C271"
+          alt="MARVEL LOGO"
+        />
+      </div>
+    </div>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("mymodal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

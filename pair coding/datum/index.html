@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datum</title>
+  </head>
+  <body>
+    <!-- Maak een functie die 2 datums als input meekrijgt en het verschil tussen de eerste en de tweede datum in dagen teruggeeft.
+Voorbeeld:
+getDays(
+  new Date(“June 14, 2019”),
+  new Date(“June 20, 2019")
+) ➞ 6
+getDays(
+  new Date(“December 29, 2018”),
+  new Date(“January 1, 2019")
+) ➞ 3
+// Dates may not all be in the same month/year.
+getDays(
+  new Date(“July 20, 2019”),
+  new Date(“July 30, 2019")
+) ➞ 10 -->
+
+    <script type="text/javascript">
+      // JavaScript program to illustrate
+      // calculation of no. of days between two date
+
+      function getDays(beginDate, endDate) {
+        // console.log(beginDate.getTime());
+        let timeInMilisec = beginDate.getTime() - endDate.getTime();
+        let daysInBetween = timeInMilisec / (1000 * 60 * 60 * 24);
+        let daysBetweenDates =
+          daysInBetween < 0 ? daysInBetween * -1 : daysInBetween;
+        // let daysBetweenDates;
+        // if (daysInBetween < 0) {
+        //     daysBetweenDates = daysInBetween * -1;
+        // } else {
+        //     daysBetweenDates = daysInBetween;
+        // }
+        return daysBetweenDates;
+      }
+      console.log(
+        getDays(new Date("June 20, 2019"), new Date("June 14, 2019"))
+      ); // 6
+      console.log(
+        getDays(new Date("December 29, 2018"), new Date("January 1, 2019"))
+      ); // 3
+      console.log(
+        getDays(new Date("July 20, 2019"), new Date("July 30, 2019"))
+      ); // 10
+
+      //-----------------------------------
+
+      //   // To set two dates to two variables
+      //   var date1 = new Date("02/27/2021");
+      //   var date2 = new Date("03/01/2021");
+
+      //   // To calculate the time difference of two dates
+      //   var Difference_In_Time = date2.getTime() - date1.getTime();
+
+      //   // To calculate the no. of days between two dates
+      //   var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+      //   //To display the final no. of days (result)
+      //   document.write(
+      //     "Total number of days between dates  <br>" +
+      //       date1 +
+      //       "<br> and <br>" +
+      //       date2 +
+      //       " is: <br> " +
+      //       Difference_In_Days
+      //   );
+      //   console.log();
+
+      //   // -------------------------------------------------
+
+      //   let juni = new Date("June 29, 2019");
+      //   let july = new Date("June 29, 2021");
+
+      //   //The getTime() method returns the number of milliseconds since (maand dag, jaar):
+      //   let verschil = juni.getTime() - july.getTime();
+      //   let dag = verschil / (1000 * 3600 * 24);
+
+      //   console.log(dag);
+
+      //   //-----------------------------------------
+
+      //   const startDate = "2020-02-27";
+      //   const endDate = "2020-03-01";
+
+      //   function getDays() {
+      //     const diffInMs = new Date(endDate) - new Date(startDate);
+      //     const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+
+      //     console.log(diffInDays);
+      //   }
+
+      //   getDays();
+
+      //   //------------------------------------
+
+      //   function dateHandler(datum1, datum2) {
+      //     let date1 = new Date(datum1);
+      //     let date2 = new Date(datum2);
+      //     let tijd = date2.getTime() - date1.getTime();
+      //     let dag = tijd / (1000 * 60 * 60 * 24);
+      //     let round = Math.ceil(dag);
+      //     // Math.abs of * -1, als de uitkomst een negativ getal is
+      //     return round;
+      //   }
+
+      //   console.log(dateHandler("06/29/2021", "07/03/2021"));
+
+      //   //-------------------------------
+
+      //   //   timeInMilisec => gebruik je voor bvb webshop return date
+
+      //   //--------------------------
+
+      //   // UNIX EPOCH -> opzoeken
+
+      //   //---------------------------
+
+      //   function datums() {
+      //     let juni = new Date("June 30, 2021");
+      //     let july = new Date("June 29, 2021");
+
+      //     let verschil = juni.getTime() - july.getTime();
+      //     let dag = (verschil / (1000 * 3600 * 24)) * -1;
+      //     if (dag > 0) {
+      //       dag * 0;
+      //     }
+
+      //     return dag;
+      //   }
+
+      //   console.log(datums());
+
+      //   //-----------------------------------
+
+      //   let x = new Date("Mar 30 2015")
+      //     let y = new Date("Mar 25 2015")
+      //     let z
+
+      //     function getNewDays(x, y) {
+      //        z = Math.ceil((y-x)/86400000)
+      //        return console.log(z)
+      //     }
+
+      //     getNewDays(new Date("December 29 2018"), new Date("January 1 2019"))
+
+      //     //------------------------------
+    </script>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        div {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+​
+<body>
+    <!-- Opdracht is voor 2-cijferige getallen
+    Ik heb 6-cijferige getallen gemaakt omdat ik koppig ben -->
+    <div>
+        <input type="number">
+        <button onclick=calculate()>Number to Text!</button>
+    </div>
+    <div>
+        <h2></h2>
+    </div>
+    <script>
+        function countOneDigit(number) {
+            let output;
+            switch (Number(number)) {
+                case 1:
+                    output = "Een"
+                    break;
+                case 2:
+                    output = "Twee"
+                    break;
+                case 3:
+                    output = "Drie"
+                    break;
+                case 4:
+                    output = "Vier"
+                    break;
+                case 5:
+                    output = "Vijf"
+                    break;
+                case 6:
+                    output = "Zes"
+                    break;
+                case 7:
+                    output = "Zeven"
+                    break;
+                case 8:
+                    output = "Acht"
+                    break;
+                case 9:
+                    output = "Negen"
+                    break;
+            }
+            return output;
+        }
+​
+        function countTwoDigits(number) {
+            let firstChar = String(number).charAt(0)
+            let secondChar = String(number).charAt(1)
+            let output;
+            let result;
+            switch (Number(firstChar)) {
+                case 1:
+                    output = "Tien"
+                    break;
+                case 2:
+                    output = "Twintig"
+                    break;
+                case 3:
+                    output = "Dertig"
+                    break;
+                case 4:
+                    output = "Veertig"
+                    break;
+                case 5:
+                    output = "Vijftig"
+                    break;
+                case 6:
+                    output = "Zestig"
+                    break;
+                case 7:
+                    output = "Zeventig"
+                    break;
+                case 8:
+                    output = "Tachtig"
+                    break;
+                case 9:
+                    output = "Negentig"
+                    break;
+            }
+            if (output === "Tien") {
+                switch (Number(secondChar)) {
+                    case 0:
+                        result = output
+                        break;
+                    case 1:
+                        result = "Elf"
+                        break;
+                    case 2:
+                        result = "Twaalf"
+                        break;
+                    case 3:
+                        result = "Dertien"
+                        break;
+                    case 4:
+                        result = "Veertien"
+                        break;
+                    default:
+                        result = countOneDigit(secondChar) + output;
+                }
+                return result;
+            }
+            switch (Number(secondChar)) {
+                case 0:
+                    result = output;
+                    break;
+                case 2:
+                case 3:
+                    if (output) result = countOneDigit(secondChar) + "ën" + output;
+                    if (!output) result = countOneDigit(secondChar)
+                    break;
+                default:
+                    if (output) result = countOneDigit(secondChar) + "en" + output;
+                    if (!output) result = countOneDigit(secondChar)
+                    break;
+            }
+            if (!result) result = ""
+            return result;
+        }
+​
+        function count(number) {
+            let length = String(number).length
+            let firstChar = Number(String(number).charAt(0))
+            let secondChar = Number(String(number).charAt(1))
+            let leadingDigits;
+            let lastTwoDigits;
+            let restOfNumber;
+            let output;
+            let result;
+            switch (length) {
+                case 1:
+                    result = countOneDigit(number)
+                    break;
+                case 2:
+                    result = countTwoDigits(number)
+                    break;
+                case 3:
+                    restOfNumber = String(number).slice(1)
+                    if (firstChar === 1) {
+                        result = "honderd" + countTwoDigits(restOfNumber)
+                        break;
+                    }
+                    result = countOneDigit(firstChar) + "honderd" + countTwoDigits(restOfNumber)
+                    break;
+                case 4:
+                    leadingDigits = String(number).slice(0, 2)
+                    lastTwoDigits = String(number).slice(2)
+                    if (leadingDigits === "10") {
+                        result = "duizend " + countTwoDigits(lastTwoDigits)
+                        break;
+                    }
+                    if (secondChar === 0) {
+                        result = countOneDigit(firstChar) + "duizend " + countTwoDigits(lastTwoDigits)
+                        break;
+                    }
+                    result = countTwoDigits(leadingDigits) + "honderd" + countTwoDigits(lastTwoDigits)
+                    break;
+                case 5:
+                case 6:
+                    leadingDigits = String(number).slice(0, length - 3)
+                    restOfNumber = String(number).slice(length - 3)
+                    result = count(Number(leadingDigits)) + "duizend " + count(Number(restOfNumber))
+            }
+            return result
+        }
+​
+        function calculate() {
+            let input = document.querySelector('input').value
+            if (String(Number(input)).length < 7) {
+                let result = count(Number(input))
+                result = result.toLowerCase()
+                result = result.charAt(0).toUpperCase() + result.slice(1)
+                document.querySelector('h2').innerText = result
+            }
+            if (String(Number(input)).length > 6) {
+                document.querySelector('h2').innerText = "Getal is te groot!"
+            }
+        }
+    </script>
+</body>
+​
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers to Letters</title>
+</head>
+<body>
+    <input type="number">
+    <button onclick=convertToLetters()>Convert</button>
+    <p></p>
+    <script src="index.js"></script>
+</body>
+</html> -->
+
+
+<!-- https://stackoverflow.com/questions/5529934/javascript-numbers-to-words?rq=1 -->
+
+   
+
+    

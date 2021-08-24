@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One bounce animation</title>
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100%;
+        background-color: rgb(252, 188, 238);
+      }
+      hr {
+        position: relative;
+        top: 90vh;
+        border: 0.5px solid;
+      }
+
+      .ball {
+        position: absolute;
+        background: #f76a5a;
+        box-shadow: 4px -40px 60px 5px rgb(206, 26, 26) inset;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        animation: bounce 3s linear infinite forwards;
+      }
+
+      @keyframes bounce {
+        0% {
+          top: 20vh;
+          left: -20vw;
+        }
+
+        50% {
+          top: calc(90vh - 99px);
+          left: 50%;
+        }
+
+        100% {
+          top: 20vh;
+          left: 110vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball"></div>
+    <hr />
+  </body>
+</html>

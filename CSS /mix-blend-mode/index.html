@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mix-blend-mode</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: black;
+      }
+
+      .blend img:first-child {
+        position: absolute;
+        mix-blend-mode: exclusion;
+      }
+      .text {
+        padding-top: 6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blend">
+      <img
+        src="marcin-lukasik-uYpOYyJdhRE-unsplash.jpg"
+        width="400"
+        height="600"
+      />
+      <img
+        class="text"
+        src="https://www.xtrafondos.com/wallpapers/vertical/marvel-studios-nuevo-logo-3427.jpg"
+        width="400"
+        height="600"
+      />
+    </div>
+  </body>
+</html>

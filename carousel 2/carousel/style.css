@@ -1,0 +1,59 @@
+.slideshow-container {
+    width: 60vw;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mySlides {
+    width: 60vw;
+  }
+
+  .slide {
+    width: 60vw;
+    position: absolute;
+    display: block;
+    top: 0;
+    z-index: -1;
+    transition: transform 0.5s, z-index 0.5s;
+  }
+
+  .slide.active {
+    position: relative;
+    z-index: 1;
+  }
+
+  .slide.transition {
+    transition: 0.5s ease transform;
+  }
+
+  .carousel-controls {
+    position: absolute;
+    background-color: rgb(85, 85, 85);
+    opacity: 0.5;
+    height: 100%;
+    width: 5%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+  }
+
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .carousel-controls:hover {
+    opacity: 0.7;
+  }
+
+  .prev {
+    top: 0;
+    left: 0;
+  }
+
+  .next {
+    top: 0;
+    right: 0;
+  }

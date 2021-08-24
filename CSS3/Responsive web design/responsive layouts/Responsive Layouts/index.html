@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avoiding heights, using percentages and em</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Using percentages & avoiding heights -->
+
+    <div class="parent">
+      <!-- parent is 100%, =body, =viewport -->
+      <div class="child">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quo libero
+        fugit iusto nisi deleniti, inventore temporibus cupiditate veniam vitae
+        nihil, officiis pariatur nemo vel excepturi ipsam nobis repellendus
+        aspernatur omnis quos consequatur obcaecati! Vel veniam blanditiis
+        suscipit possimus quidem, dicta ipsam quos dolores. Quisquam natus alias
+        quia laborum, saepe autem tempore enim similique excepturi qui
+        accusantium perferendis consequuntur laboriosam error sequi optio
+        itaque, totam voluptatum amet quibusdam corrupti libero non. A ipsa
+        vitae animi maiores minima explicabo, ipsam rem perferendis deleniti sed
+        nesciunt cupiditate adipisci, iure cumque tenetur suscipit veniam libero
+        soluta itaque corporis nobis placeat facere architecto illum.
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates
+        itaque quasi non voluptatibus voluptatem aut aliquam possimus
+        aspernatur, delectus soluta cumque omnis fugiat necessitatibus, dolorum
+        ad! Quidem consequatur asperiores libero.
+      </p>
+    </div>
+
+    <!--  Getting familiar with relative units;
+you shouldn't set font-sizes using em  -->
+
+    <div class="content">
+      <h2>Why you shouldn't set font-sizes using em</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <ul>
+        <!-- font-size 1.125em -->
+        <li>Lorem, ipsum dolor.</li>
+        <li>Lorem ipsum dolor sit.</li>
+      </ul>
+      <ul>
+        <!-- font-size 1.125em * 1.125 because of it's parent's font-size-->
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+      </ul>
+      <ul>
+        <!-- font-size 1.125em * 1.125 * 1.125-->
+        <li>Lorem ipsum dolor sit.</li>
+        <li>Lorem ipsum dolor sit.</li>
+      </ul>
+    </div>
+
+    <div class="cta">
+      <h2 class="cta_title">Contact</h2>
+      <p class="cta_body">Lorem ipsum dolor sit amet.</p>
+      <p>
+        <a href="#" class="cta_btn">MAIL</a>
+      </p>
+    </div>
+  </body>
+</html>
